@@ -1,0 +1,8412 @@
+/* You can add global styles to this file, and also import other style files */
+/** choice checkmark **/
+@-webkit-keyframes choice-checkmark-anim {
+  0% {
+    clip: rect(94px, 0px, 94px, 0);
+  }
+
+  100% {
+    clip: rect(0px, 94px, 94px, 0);
+  }
+}
+
+@keyframes choice-checkmark-anim {
+  0% {
+    clip: rect(94px, 0px, 94px, 0);
+  }
+
+  100% {
+    clip: rect(0px, 94px, 94px, 0);
+  }
+}
+
+/** accordion checkmark **/
+@-webkit-keyframes accordion-checkmark-anim {
+  0% {
+    clip: rect(60px, 0px, 60px, 0);
+  }
+
+  100% {
+    clip: rect(0px, 60px, 60px, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes accordion-checkmark-anim {
+  0% {
+    clip: rect(60px, 0px, 60px, 0);
+  }
+
+  100% {
+    clip: rect(0px, 60px, 60px, 0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes accordion-checkmark-bk-anim {
+  0% {
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes accordion-checkmark-bk-anim {
+  0% {
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/** blomster add **/
+@-webkit-keyframes blomster-add {
+  0% {
+    opacity: 1;
+    max-height: 400px;
+  }
+
+  100% {
+    opacity: 0;
+    max-height: 0px;
+  }
+}
+
+@keyframes blomster-add {
+  0% {
+    opacity: 1;
+    max-height: 200px;
+  }
+
+  100% {
+    opacity: 0;
+    max-height: 0px;
+  }
+}
+
+/** text field error **/
+@-webkit-keyframes textfield-error {
+  0% {
+    background: #f66;
+  }
+
+  100% {
+    background: #fff;
+  }
+}
+
+@keyframes textfield-error {
+  0% {
+    background: #f66;
+  }
+
+  100% {
+    background: #fff;
+  }
+}
+
+ul.choices {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+  ul.choices.text li {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    margin: 0px;
+    padding: 20px 0px 20px 100px;
+    width: 100%;
+    min-height: 100px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  ul.choices.text.size-50 li {
+    min-height: 50px;
+  }
+
+  ul.choices.text li img.play-button {
+    width: 22px;
+    height: 22px;
+    position: relative;
+    top: 4px;
+    padding-right: 10px;
+  }
+
+  ul.choices li > p,
+  ul.choices li > div {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+
+  ul.choices li.hidden {
+    cursor: auto !important;
+  }
+
+    ul.choices li.hidden > p,
+    ul.choices li.hidden > div {
+      opacity: 0.1;
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s;
+    }
+
+    ul.choices li.hidden:after {
+      content: 'Finnes ikke i denne fargen';
+      display: inline;
+      position: absolute;
+      width: auto;
+      top: 50%;
+      left: 50%;
+      border: 1px solid #fff;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -o-border-radius: 5px;
+      border-radius: 5px;
+      padding: 10px;
+      white-space: nowrap;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -o-box-sizing: border-box;
+      box-sizing: border-box;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+
+  ul.choices.text.size-50 li {
+    padding: 10px 0px 30px 75px;
+  }
+
+  ul.choices.image li {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 20px 30px 0px 30px;
+    width: 100%;
+    min-height: 100px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  ul.choices.two-column li {
+    width: 50%;
+    float: left;
+  }
+
+  ul.choices li.full {
+    width: 60%;
+    margin: 0px 20%;
+    float: none;
+  }
+
+  ul.choices.text li:before,
+  ul.choices.text li:after,
+  ul.choices.image li .image span:before,
+  ul.choices.image li .image span:after {
+    -webkit-transform-origin: 0px 0px 0px;
+    -moz-transform-origin: 0px 0px 0px;
+    -ms-transform-origin: 0px 0px 0px;
+    -o-transform-origin: 0px 0px 0px;
+    transform-origin: 0px 0px 0px;
+  }
+
+  ul.choices.text li:before,
+  ul.choices.text li:after,
+  ul.choices.text.size-75 li:before,
+  ul.choices.text.size-75 li:after {
+    -webkit-transform: scale(0.75, 0.75);
+    -moz-transform: scale(0.75, 0.75);
+    -o-transform: scale(0.75, 0.75);
+    transform: scale(0.75, 0.75);
+  }
+
+  ul.choices.text.size-50 li:before,
+  ul.choices.text.size-50 li:after {
+    -webkit-transform: scale(0.5, 0.5);
+    -moz-transform: scale(0.5, 0.5);
+    -o-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5);
+  }
+
+  ul.choices.image li .image span:before,
+  ul.choices.image li .image span:after {
+    -webkit-transform: scale(0.5, 0.5) translate(-50%, -50%);
+    -moz-transform: scale(0.5, 0.5) translate(-50%, -50%);
+    -o-transform: scale(0.5, 0.5) translate(-50%, -50%);
+    transform: scale(0.5, 0.5) translate(-50%, -50%);
+  }
+
+
+  ul.choices.text li:before,
+  ul.choices.image li .image span:before {
+    content: ' ';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 92px;
+    height: 92px;
+    background: #3b3b3b;
+    border: 1px solid #ccc;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+
+  ul.choices.text li.active:before,
+  ul.choices.image li.active .image span:before {
+    background: #96b21f;
+    border: 1px solid #fff;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+
+  ul.choices.text li:after,
+  ul.choices.image li .image span:after {
+    content: 'VELG';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 94px;
+    height: 94px;
+    font-size: 24px;
+    text-align: center;
+    color: #ccc;
+  }
+
+  ul.choices.text.plus-button li:after,
+  ul.choices.image.plus-button li .image span:after {
+    content: '+';
+    font-size: 88px;
+    font-weight: bold;
+    margin-top: -4px;
+    padding-top: 0px;
+  }
+
+  ul.choices.text li:after {
+    padding-top: 32px;
+  }
+
+  ul.choices.image li .image span:after {
+    padding-top: 60px;
+  }
+
+  ul.choices.text li.active:after,
+  ul.choices.image li.active .image span:after {
+    content: url(assets/pages/checkmark.svg);
+    margin-top: 0px;
+    padding-top: 0px;
+    clip: rect(0, 0px, 94px, 0);
+    -webkit-animation: choice-checkmark-anim 0.2s linear 0.1s 1 normal forwards;
+    -moz-animation: choice-checkmark-anim 0.2s linear 0.1s 1 normal forwards;
+    -o-animation: choice-checkmark-anim 0.2s linear 0.1s 1 normal forwards;
+    animation: choice-checkmark-anim 0.2s linear 0.1s 1 normal forwards;
+  }
+
+  ul.choices.image li .image span:before,
+  ul.choices.image li .image span:after {
+    top: 50% !important;
+  }
+
+  ul.choices.image li:nth-child(2n) .image span:before,
+  ul.choices.image li:nth-child(2n) .image span:after {
+    left: 100% !important;
+  }
+
+  ul.choices.image li div.info {
+    font-size: 16px;
+    line-height: 21px;
+    text-align: left;
+    padding: 5px 0px 0px;
+    height: 25px;
+  }
+
+    ul.choices.image li div.info p {
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+      ul.choices.image li div.info p.title {
+        display: inline;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+
+      ul.choices.image li div.info p.price {
+        display: inline;
+        color: #96b21f;
+        font-weight: bold;
+        white-space: nowrap;
+        float: right;
+      }
+
+    ul.choices.image li div.info.read-more {
+      text-align: center;
+    }
+
+      ul.choices.image li div.info.read-more p {
+        background: #555555;
+        color: #fff;
+        font-size: 12px;
+        font-weight: bold;
+        display: inline;
+        position: relative;
+        padding: 5px 15px;
+        white-space: nowrap;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -o-border-radius: 5px;
+        border-radius: 5px;
+      }
+
+  ul.choices.image li.info-active p.read-more span {
+    background: #96b21f;
+  }
+
+
+  ul.choices.image li .image {
+    position: relative;
+  }
+
+    ul.choices.image li .image img {
+      width: 100%;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -o-box-sizing: border-box;
+      box-sizing: border-box;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -o-border-radius: 10px;
+      border-radius: 10px;
+      vertical-align: bottom;
+    }
+
+    ul.choices.image li .image span {
+      position: absolute;
+      display: block;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+    }
+
+    ul.choices.image li .image div {
+      position: absolute;
+      opacity: 0;
+      -webkit-transition: all 0.2s;
+      -moz-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -o-box-sizing: border-box;
+      box-sizing: border-box;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -o-border-radius: 10px;
+      border-radius: 10px;
+      background: #fff;
+      background: rgba(255, 255, 255, 0.9);
+    }
+
+  ul.choices.image li.info-active .image div {
+    opacity: 1;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+
+  ul.choices.image li .image div p {
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    width: 100%;
+    height: auto;
+    color: #000;
+    padding: 10%;
+    text-align: center;
+    font-size: 14px;
+    line-height: 19px;
+    -webkit-transform: translate(0%, -50%);
+    -moz-transform: translate(0%, -50%);
+    -o-transform: translate(0%, -50%);
+    transform: translate(0%, -50%);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  ul.choices li h3,
+  ul.choices li p {
+    text-align: left;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  ul.choices li p {
+    display: inline;
+  }
+
+  ul.choices.text li p.price {
+    padding: 10px 0px;
+    display: block;
+    color: #96B21F;
+  }
+
+section.accordion {
+  background: rgba(17, 17, 17, 0.9);
+  padding: 0px 0px 40px;
+  margin: 0px 0px 20px;
+  border: 2px solid #fff;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  color: #fff;
+  max-height: 70px;
+  overflow: hidden;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  box-sizing: unset !important;
+}
+
+  section.accordion.open {
+    max-height: 1500px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+
+
+  section.accordion header {
+    position: relative;
+    padding: 40px 50px 40px;
+    cursor: pointer;
+  }
+
+    section.accordion header:before,
+    section.accordion header:after,
+    section.accordion.open header:before,
+    section.accordion.open header:after {
+      content: ' ';
+      position: absolute;
+      width: 58px;
+      height: 58px;
+      right: 50px;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      border: 1px solid #fff;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%;
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s;
+    }
+
+  section.accordion.checked header:before,
+  section.accordion.checked header:after,
+  section.accordion.open.checked header:before,
+  section.accordion.open.checked header:after {
+    display: none;
+  }
+
+  section.accordion header:before {
+    top: 20px;
+    opacity: 1;
+    background: url(assets/pages/down.svg);
+  }
+
+  section.accordion.open header:before {
+    top: 50px;
+    opacity: 0;
+  }
+
+  section.accordion header:after {
+    top: 10px;
+    opacity: 0;
+    background: url(assets/pages/up.svg);
+  }
+
+  section.accordion.open header:after {
+    top: 20px;
+    opacity: 1;
+  }
+
+
+  section.accordion.checked header span:before {
+    content: ' ';
+    position: absolute;
+    width: 58px;
+    height: 58px;
+    right: 50px;
+    top: 20px;
+    opacity: 0;
+    background: #96b21f;
+    border: 1px solid #fff;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-animation: accordion-checkmark-bk-anim 0.2s linear 0.1s 1 normal forwards;
+    -moz-animation: accordion-checkmark-bk-anim 0.2s linear 0.1s 1 normal forwards;
+    -o-animation: accordion-checkmark-bk-anim 0.2s linear 0.1s 1 normal forwards;
+    animation: accordion-checkmark-bk-anim 0.2s linear 0.1s 1 normal forwards;
+  }
+
+  section.accordion.checked header span:after {
+    content: url(assets/pages/checkmark.svg);
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    right: 50px;
+    top: 20px;
+    opacity: 0;
+    background: none;
+    clip: rect(0, 0px, 60px, 0);
+    -webkit-animation: accordion-checkmark-anim 0.2s linear 0.1s 1 normal forwards;
+    -moz-animation: accordion-checkmark-anim 0.2s linear 0.1s 1 normal forwards;
+    -o-animation: accordion-checkmark-anim 0.2s linear 0.1s 1 normal forwards;
+    animation: accordion-checkmark-anim 0.2s linear 0.1s 1 normal forwards;
+  }
+
+
+  section.accordion header h2 {
+    font-family: Montserrat, Arial, sans-serif !important;
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    height: 30px;
+    margin: 0px;
+    padding: 0px;
+    font-weight: bold !important;
+  }
+
+  section.accordion > div {
+    border-top: 2px solid #fff;
+    padding: 40px 0px 0px;
+    margin: 0px 50px;
+    opacity: 0;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+
+  section.accordion.open > div {
+    opacity: 1;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+
+  section.accordion > div > p {
+    padding: 0px;
+    margin: 0px 0px 40px;
+  }
+
+section.accordion-small {
+  background: #111111;
+  background: rgba(17, 17, 17, 0.9);
+  padding: 0px 0px 20px;
+  margin: 0px 0px 10px;
+  border: 1px solid #fff;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  color: #fff;
+  max-height: 35px;
+  overflow: hidden;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+  section.accordion-small.open {
+    max-height: 1000px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+
+
+  section.accordion-small header {
+    position: relative;
+    padding: 20px 25px 20px;
+    cursor: pointer;
+  }
+
+    section.accordion-small header:before,
+    section.accordion-small header:after,
+    section.accordion-small.open header:before,
+    section.accordion-small.open header:after {
+      content: ' ';
+      position: absolute;
+      width: 23px;
+      height: 23px;
+      right: 25px;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      border: 1px solid #fff;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%;
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s;
+    }
+
+  section.accordion-small.checked header:before,
+  section.accordion-small.checked header:after,
+  section.accordion-small.open.checked header:before,
+  section.accordion-small.open.checked header:after {
+    display: none;
+  }
+
+  section.accordion-small header:before {
+    top: 15px;
+    opacity: 1;
+    background: url(assets/pages/down.svg);
+  }
+
+  section.accordion-small.open header:before {
+    top: 25px;
+    opacity: 0;
+  }
+
+  section.accordion-small header:after {
+    top: 5px;
+    opacity: 0;
+    background: url(assets/pages/up.svg);
+  }
+
+  section.accordion-small.open header:after {
+    top: 15px;
+    opacity: 1;
+  }
+
+
+  section.accordion-small header h2 {
+    font-family: Montserrat, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    height: 15px;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  section.accordion-small > div {
+    border-top: 1px solid #fff;
+    padding: 20px 0px;
+    margin: 0px 25px;
+    opacity: 0;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+
+  section.accordion-small.open > div {
+    opacity: 1;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+
+  section.accordion-small > div > p {
+    padding: 0px;
+    margin: 0px 0px 20px;
+  }
+
+html, body {
+  margin: 0px;
+  padding: 0px;
+  /*overflow			: hidden;*/
+  background: #252525;
+}
+
+article, aside, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/**
+
+	PAGE
+
+**/
+
+h1 {
+  padding: 0px 0px 20px 0px;
+  margin: 0px;
+  color: #000;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+h2 {
+  padding: 0px 0px 10px 0px;
+  margin: 0px;
+  color: #000;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+* {
+  font-family: Montserrat, Arial, sans-serif;
+}
+
+p {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+p, li {
+}
+
+button {
+  background: #fff;
+  border: 0px;
+  padding: 10px 20px;
+  color: #000;
+  cursor: pointer;
+  -webkit-transition: background 0.2s;
+  -moz-transition: background 0.2s;
+  -o-transition: background 0.2s;
+  transition: background 0.2s;
+}
+
+hr {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #000;
+  border: 0px;
+  margin: 20px 40px 60px;
+  height: 2px;
+}
+
+.dark hr {
+  background: #fff;
+}
+
+button:hover {
+  background: #fde732;
+}
+
+.f-left {
+  float: left;
+}
+
+.f-right {
+  float: right;
+}
+
+.t-left {
+  text-align: left;
+}
+
+.t-center {
+  text-align: center;
+}
+
+.t-right {
+  text-align: right;
+}
+
+.normal-hidden {
+  display: none;
+}
+
+.info-no-javascript {
+  display: none;
+}
+
+.pt20 {
+  padding-top: 20px;
+}
+
+div.backgrounds {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+
+  div.backgrounds div {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #fff;
+  }
+
+.width-controller {
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+
+ul.main-menu { /** width and margins controlled by .width-controller **/
+  position: fixed;
+  z-index: 11000;
+  bottom: 0px;
+  left: 0px;
+  height: 16%;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+  padding: 0px;
+  list-style-type: none;
+  -webkit-transition: 0.8s all;
+  -moz-transition: 0.8s all;
+  -o-transition: 0.8s all;
+  transition: 0.8s all;
+}
+
+.text-editing ul.main-menu {
+}
+
+ul.main-menu::before {
+  content: ' ';
+  font-size: 1px;
+  position: absolute;
+  left: 10.66%;
+  top: 50%;
+  margin-top: -2px;
+  width: 78.66%;
+  height: 5px;
+  background: #fff;
+}
+
+ul.main-menu li {
+  position: absolute;
+  top: 50%;
+  height: 100%;
+  width: 16%;
+  cursor: pointer;
+}
+
+  ul.main-menu li.item-1 {
+    left: 10.66%;
+  }
+
+  ul.main-menu li.item-2 {
+    left: 30.33%;
+  }
+
+  ul.main-menu li.item-3 {
+    left: 50%;
+  }
+
+  ul.main-menu li.item-4 {
+    left: 69.66%;
+  }
+
+  ul.main-menu li.item-5 {
+    left: 89.33%;
+  }
+
+  ul.main-menu li img {
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 100%;
+    border: 5px solid #fff;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    background: #3b3b3b;
+    -webkit-transition: 0.8s all;
+    -moz-transition: 0.8s all;
+    -o-transition: 0.8s all;
+    transition: 0.8s all;
+  }
+
+  ul.main-menu li.active img {
+    -webkit-transition: 0.8s all;
+    -moz-transition: 0.8s all;
+    -o-transition: 0.8s all;
+    transition: 0.8s all;
+    background: #96b21f;
+  }
+
+
+div.containers {
+  position: absolute;
+  height: 80%; /* 80 */
+  width: 100%;
+  -webkit-transition: 0.8s all;
+  -moz-transition: 0.8s all;
+  -o-transition: 0.8s all;
+  transition: 0.8s all;
+}
+
+.text-editing div.containers {
+}
+
+.top-line {
+  position: fixed;
+  z-index: 100;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  background: #333;
+  padding: 20px;
+  overflow: hidden;
+  opacity: 1;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: 0.8s all;
+  -moz-transition: 0.8s all;
+  -o-transition: 0.8s all;
+  transition: 0.8s all;
+}
+
+.text-editing .top-line {
+}
+
+.top-line .logo {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  height: 65px;
+}
+
+.top-line p {
+  margin: 0px;
+  padding: 0px;
+}
+
+.top-line .my-choices {
+  display: inline;
+  float: right;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  text-align: right;
+  color: #fff;
+  padding: 10px;
+  background: #96b21f;
+  border: 1px solid #fff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.top-line .price {
+  display: inline;
+  float: right;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  text-align: right;
+  padding-top: 10px;
+  padding-right: 10px;
+  color: #96b21f;
+}
+
+  .top-line .price .info {
+  }
+
+.top-line .message {
+  /*
+	display						: inline;
+	float						: left;
+	*/
+  height: 16px;
+  display: inline;
+}
+
+  .top-line .message span {
+    opacity: 0;
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    line-height: 16px;
+    margin-top: 26px;
+    white-space: nowrap;
+  }
+
+    .top-line .message span.in {
+      opacity: 1;
+      margin-top: 0px;
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s;
+    }
+
+    .top-line .message span.out {
+      opacity: 0;
+      margin-top: -26px;
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s;
+    }
+
+
+
+
+
+span.symbol-button {
+  position: relative;
+  display: inline-block;
+  padding: 10px 50px 0px 0px;
+  height: 40px;
+  cursor: pointer;
+}
+
+  span.symbol-button:before,
+  span.symbol-button:after {
+    content: ' ';
+    position: absolute;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+
+  span.symbol-button:before {
+    background: #96b21f;
+    width: 38px;
+    height: 38px;
+    top: 0px;
+    right: 0px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border: 1px solid #fff;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+  }
+
+  span.symbol-button:after {
+    width: 30px;
+    height: 30px;
+    top: 5px;
+    right: 5px;
+  }
+
+  span.symbol-button.plus:after {
+    background: url(assets/pages/plus.svg);
+  }
+
+  span.symbol-button.minus:after {
+    background: url(assets/pages/minus.svg);
+  }
+
+::-webkit-scrollbar {
+  width: 0px; /* remove scrollbar space */
+  background: transparent; /* optional: just make scrollbar invisible */
+}
+
+.scrollboxes {
+  width: 100%;
+}
+
+  .scrollboxes .content {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 100;
+    left: 0px;
+    top: 0%;
+    height: 100%;
+    width: 100%;
+    margin-top: 78px;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-mask-image: linear-gradient( to bottom, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100% );
+    mask-image: linear-gradient( to bottom, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100% );
+    -webkit-transition: 0.8s all;
+    -moz-transition: 0.8s all;
+    -o-transition: 0.8s all;
+    transition: 0.8s all;
+  }
+
+.text-editing .scrollboxes .content {
+}
+
+.scrollboxes .content.down {
+  -webkit-mask-image: linear-gradient( to bottom, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100% );
+  mask-image: linear-gradient( to bottom, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100% );
+}
+
+.scrollboxes .content.up {
+  -webkit-mask-image: linear-gradient( to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 0% );
+  mask-image: linear-gradient( to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 0% );
+}
+
+  .scrollboxes .content.up.down {
+    -webkit-mask-image: linear-gradient( to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100% );
+    mask-image: linear-gradient( to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100% );
+  }
+
+.scrollboxes .content .scrollbox {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  display: block;
+  overflow: hidden;
+  color: #000;
+  min-height: 101%;
+  padding-top: 40px;
+  padding-bottom: 150px;
+}
+
+
+  .scrollboxes .content .scrollbox.dark {
+    color: #fff;
+  }
+
+  .scrollboxes .content .scrollbox .contrast-container.mobile {
+  }
+
+
+  .scrollboxes .content .scrollbox h1 {
+    padding: 20px 0px;
+    text-align: center;
+    font-family: Montserrat, Arial, sans-serif;
+    font-size: 46px;
+    line-height: 46px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #3b3b3b;
+  }
+
+  .scrollboxes .content .scrollbox.dark h1 {
+    color: #fff;
+  }
+
+  .scrollboxes .content .scrollbox h1 span {
+    display: block;
+    font-family: Satisfy, Arial, sans-serif;
+    font-size: 40px;
+    line-height: 46px;
+    letter-spacing: normal;
+    text-transform: none;
+  }
+
+  .scrollboxes .content .scrollbox .heading img {
+    width: 100%;
+  }
+
+.form .sections {
+  margin-left: -30px;
+  clear: both;
+  overflow: hidden;
+}
+
+  .form .sections > h2,
+  .form .sections .section > h2,
+  .form .sections .section .contrast-container > h2 {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 30px;
+    font-family: Montserrat, Arial, sans-serif !important;
+    font-weight: bold !important;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #000;
+    padding: 0px 20% 20px;
+    margin: 0px;
+  }
+
+  .form .sections > p,
+  .form .sections .section > p,
+  .form .sections .section .contrast-container > p {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 30px;
+    font-family: Montserrat, Arial, sans-serif !important;
+    font-weight: normal !important;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+    color: #000;
+    padding: 0px 10% 40px;
+    margin: 0px;
+  }
+
+
+  .form .sections .section .full-description {
+    display: none;
+    padding: 0px;
+  }
+
+    .form .sections .section .full-description p {
+      text-align: center;
+    }
+
+  .form .sections .section .buttons {
+    text-align: center;
+  }
+
+    .form .sections .section .buttons a.edit,
+    .form .sections .section .buttons a.tips {
+      color: #000;
+    }
+
+      .form .sections .section .buttons a.edit.active,
+      .form .sections .section .buttons a.tips.active {
+      }
+
+      .form .sections .section .buttons a.edit img,
+      .form .sections .section .buttons a.tips img {
+        vertical-align: middle;
+        height: 50px;
+      }
+
+      .form .sections .section .buttons a.edit span,
+      .form .sections .section .buttons a.tips span {
+        vertical-align: middle;
+      }
+
+        .form .sections .section .buttons a.tips span.view {
+        }
+
+        .form .sections .section .buttons a.tips span.hide {
+          display: none;
+        }
+
+
+  .form .sections > p .price,
+  .form .sections .section > p .price,
+  .form .sections .section .contrast-container > p .price {
+    color: #96B21F;
+  }
+
+  .form .sections .section .contrast-container > p {
+  }
+
+  .form .sections .section .contrast-container > h2 {
+  }
+
+  .form .sections > h2.margin,
+  .form .sections .section > h2.margin,
+  .form .sections > p.margin,
+  .form .sections .section > p.margin {
+    margin: 0px 0px 0px 30px;
+  }
+
+.form .accordion .sections > h2,
+.form .accordion .sections .section > h2,
+.form .accordion .sections > p,
+.form .accordion .sections .section > p,
+.form.dark .sections > h2,
+.form.dark .sections .section > h2,
+.form.dark .sections > p,
+.form.dark .sections .section > p {
+  color: #fff;
+}
+
+.form .accordion hr {
+  background: #fff;
+}
+
+
+.form .sections .section {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 30px;
+  padding-bottom: 30px;
+  display: inline;
+  float: left;
+  /*overflow					: hidden;*/
+}
+
+  .form .sections .section.block {
+    display: block;
+    float: none;
+  }
+
+.form .sections.top-space-50 .section {
+  padding-top: 50px;
+}
+
+.form .sections .section.mobile-hidden {
+}
+
+.form .sections .section.size-20p {
+  width: 20%;
+}
+
+
+.form .sections .section.size-1 {
+  width: 8.33%;
+}
+
+.form .sections .section.size-2 {
+  width: 16.66%;
+}
+
+.form .sections .section.size-3 {
+  width: 25%;
+}
+
+.form .sections .section.size-4 {
+  width: 33.33%;
+}
+
+.form .sections .section.size-5 {
+  width: 41.66%;
+}
+
+.form .sections .section.size-6 {
+  width: 50%;
+}
+
+.form .sections .section.size-7 {
+  width: 58.33%;
+}
+
+.form .sections .section.size-8 {
+  width: 66.66%;
+}
+
+.form .sections .section.size-9 {
+  width: 75%;
+}
+
+.form .sections .section.size-10 {
+  width: 83.33%;
+}
+
+.form .sections .section.size-11 {
+  width: 91.66%;
+}
+
+.form .sections .section.size-12 {
+  width: 100%;
+}
+
+.form .sections .section.full {
+  width: 100%;
+}
+
+.form .sections .section.align-left {
+  text-align: left
+}
+
+.form .sections .section.align-center {
+  text-align: center
+}
+
+.form .sections .section.align-right {
+  text-align: right
+}
+
+.form .sections .section.column-70pct {
+  width: 70%;
+  margin: 0px 15%;
+}
+
+.form .sections .section.column-80pct {
+  width: 80%;
+  margin: 0px 10%;
+}
+
+.form .sections .section.column-90pct {
+  width: 90%;
+  margin: 0px 5%;
+}
+
+.form .sections .section ul.list {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px 0px 20px;
+}
+
+  .form .sections .section ul.list li,
+  .form .sections .section .comments {
+    margin: 0px;
+    padding: 0px 15% 20px 15%;
+    overflow: hidden;
+    position: relative;
+  }
+
+    .form .sections .section ul.list li p.name,
+    .form .sections .section ul.list li p.value {
+      margin: 0px;
+      padding: 10px 0px 0px;
+      text-align: left;
+      float: left;
+      display: inline;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -o-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    .form .sections .section ul.list li p.name {
+      width: 40%;
+    }
+
+    .form .sections .section ul.list li p.value {
+      width: 60%;
+      padding-right: 50px;
+    }
+
+.minevalg .sections .section img.edit,
+.minevalg .sections .section img.delete {
+  position: absolute;
+  top: -5px;
+  right: 15%;
+  height: 50px;
+  cursor: pointer;
+}
+
+
+
+.form .sections .section label {
+  display: block;
+  padding: 0px 0px 6px 3px;
+  font-family: Montserrat, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+  color: #fff;
+  width: 100%;
+  position: relative;
+}
+
+.form .sections .section span.price {
+  color: #96B21F;
+  font-size: 16px;
+}
+
+.form .sections .section.error.error-phone label:before,
+.form .sections .section.error.error-email label:before,
+.form .sections .section.error.error-date label:before,
+.form .sections .section.error.error-zip label:before {
+  color: #f66;
+  position: absolute;
+  top: 90px;
+  right: 5px;
+  font-size: 16px;
+}
+
+.form .sections .section.error.error-phone label:before {
+  content: 'Er nummeret riktig?';
+}
+
+.form .sections .section.error.error-email label:before {
+  content: 'Er e-posten riktig?';
+}
+
+.form .sections .section.error.error-date label:before {
+  content: 'Er datoen riktig?';
+}
+
+.form .sections .section.error.error-zip label:before {
+  content: 'Er nummeret riktig?';
+}
+
+.form .sections .section input[type="text"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  display: block;
+  border: 1px solid #3b3b3b;
+  padding: 12px;
+  font-size: 24px;
+  line-height: 24px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -o-border-radius: 0px;
+  border-radius: 0px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+}
+
+.form .sections .section.error input[type="text"] {
+  border: 1px solid #f66;
+  -webkit-animation: textfield-error 1s linear 0s 1 normal forwards;
+  -moz-animation: textfield-error 1s linear 0s 1 normal forwards;
+  -o-animation: textfield-error 1s linear 0s 1 normal forwards;
+  animation: textfield-error 1s linear 0s 1 normal forwards;
+}
+
+.form .sections .section textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 300px;
+  display: block;
+  border: 1px solid #3b3b3b;
+  padding: 12px;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.form button.button-straight {
+  display: inline-block;
+  padding: 20px 60px;
+  background: #96b21f;
+  font-family: Montserrat, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: #fff;
+  border: 0px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.form button.button-section {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  height: 120px;
+  background: #aaa;
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid #fff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  font-family: Montserrat, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  border: 0px;
+  padding: 0px;
+  margin: 0px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+
+  .form button.button-section img {
+    vertical-align: middle;
+    padding-right: 5%;
+    height: 70%;
+  }
+
+  .form button.button-section span {
+    padding: 0px;
+    margin: 0px;
+    vertical-align: middle;
+  }
+
+
+.form .checkbox-text,
+.form [type="checkbox"]:not(:checked) + label,
+.form [type="checkbox"]:checked + label,
+.form [type="radio"]:not(:checked) + label,
+.form [type="radio"]:checked + label {
+  display: inline-block;
+  padding: 10px 60px 10px 0px;
+  width: auto;
+  vertical-align: middle;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Base for label styling */
+
+.form [type="checkbox"]:not(:checked),
+.form [type="checkbox"]:checked,
+.form [type="radio"]:not(:checked),
+.form [type="radio"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+
+  .form [type="checkbox"]:not(:checked) + label,
+  .form [type="checkbox"]:checked + label,
+  .form [type="radio"]:not(:checked) + label,
+  .form [type="radio"]:checked + label,
+  .form span.checkbox-checked {
+    position: relative;
+  }
+
+  .form [type="checkbox"]:not(:checked) + label,
+  .form [type="checkbox"]:checked + label,
+  .form [type="radio"]:not(:checked) + label,
+  .form [type="radio"]:checked + label {
+    cursor: pointer;
+  }
+    /* checkbox aspect */
+
+    .form [type="checkbox"]:not(:checked) + label:before,
+    .form [type="checkbox"]:checked + label:before,
+    .form [type="radio"]:not(:checked) + label:before,
+    .form [type="radio"]:checked + label:before,
+    .form span.checkbox-checked:before {
+      content: '';
+      position: absolute;
+      right: 4px;
+      top: 0px;
+      width: 40px;
+      height: 40px;
+      border: 1px solid #fff;
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px;
+    }
+
+
+    /* checked mark aspect */
+
+    .form [type="checkbox"]:not(:checked) + label:after,
+    .form [type="checkbox"]:checked + label:after,
+    .form [type="radio"]:not(:checked) + label:after,
+    .form [type="radio"]:checked + label:after,
+    .form span.checkbox-checked:after {
+      content: '\2713';
+      position: absolute;
+      top: 11px;
+      right: 5px;
+      font-size: 40px;
+      font-weight: bold;
+      color: #fff;
+      text-align: center;
+      width: 40px;
+      -webkit-transition: all .1s;
+      -moz-transition: all .1s;
+      -o-transition: all .1s;
+      transition: all .1s;
+    }
+
+    /* checked mark aspect changes */
+
+    .form [type="checkbox"]:not(:checked) + label:after,
+    .form [type="radio"]:not(:checked) + label:after {
+      opacity: 0;
+      transform: scale(0) rotate(-25deg);
+    }
+
+    .form [type="checkbox"]:checked + label:after,
+    .form [type="radio"]:checked + label:after {
+      opacity: 1;
+      transform: scale(1) rotate(0deg);
+    }
+
+    .form [type="checkbox"]:checked + label:before,
+    .form [type="radio"]:checked + label:before {
+    }
+/* disabled checkbox */
+
+.form [type="radio"]:disabled:not(:checked) + label:before,
+.form [type="radio"]:disabled:checked + label:before,
+.form [type="checkbox"]:disabled:not(:checked) + label:before,
+.form [type="checkbox"]:disabled:checked + label:before {
+  box-shadow: none;
+  border-color: #bbb;
+  background-color: #ddd;
+}
+
+.form [type="checkbox"]:disabled:checked + label:after,
+.form [type="radio"]:disabled:checked + label:after {
+  color: #999;
+}
+
+.form [type="checkbox"]:disabled + label,
+.form [type="radio"]:disabled + label {
+  color: #aaa;
+}
+/* accessibility */
+
+/*
+[type="checkbox"]:checked:focus + label:before,
+[type="checkbox"]:not(:checked):focus + label:before {
+  border: 1px dotted #7d861e;
+}
+*/
+/* hover style just for information */
+.containers .content .scrollbox ul.horizontal-choices {
+  text-align: left;
+  padding: 10px 0px;
+  margin: 0px 0px 5px;
+  list-style-type: none;
+}
+
+  .containers .content .scrollbox ul.horizontal-choices li {
+    display: inline-block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin: 0px 10px 0px 0px;
+    padding: 0px;
+    border: 2px solid #fff;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+    .containers .content .scrollbox ul.horizontal-choices li.active:before {
+      content: ' ';
+      position: absolute;
+      display: block;
+      top: -6px;
+      left: -6px;
+      width: 38px;
+      height: 38px;
+      border: 2px solid #96b21f;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%;
+    }
+
+    .containers .content .scrollbox ul.horizontal-choices li img {
+      overflow: hidden;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%;
+    }
+
+    .containers .content .scrollbox ul.horizontal-choices li.white {
+      background: #fff;
+    }
+
+    .containers .content .scrollbox ul.horizontal-choices li.offwhite {
+      background: #ebebeb;
+    }
+
+    .containers .content .scrollbox ul.horizontal-choices li.pastel {
+      background: #f8acb5;
+    }
+
+    .containers .content .scrollbox ul.horizontal-choices li.pink {
+      background: #ec008c;
+    }
+
+    .containers .content .scrollbox ul.horizontal-choices li.red {
+      background: #ed1c24;
+    }
+
+    .containers .content .scrollbox ul.horizontal-choices li.orange {
+      background: #f7941d;
+    }
+
+    .containers .content .scrollbox ul.horizontal-choices li.green {
+      background: #598527;
+    }
+
+    .containers .content .scrollbox ul.horizontal-choices li.blue {
+      background: #0076a3;
+    }
+
+    .containers .content .scrollbox ul.horizontal-choices li.purple {
+      background: #92278f;
+    }
+
+.form .sections {
+  margin-left: -30px;
+  clear: both;
+  overflow: hidden;
+}
+
+  .form .sections > h2,
+  .form .sections .section > h2,
+  .form .sections .section .contrast-container > h2 {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 30px;
+    font-family: Montserrat, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #000;
+    padding: 0px 20% 20px;
+    margin: 0px;
+  }
+
+  .form .sections > p,
+  .form .sections .section > p,
+  .form .sections .section .contrast-container > p {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 30px;
+    font-family: Montserrat, Arial, sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+    color: #000;
+    padding: 0px 10% 40px;
+    margin: 0px;
+  }
+
+
+  .form .sections .section .full-description {
+    display: none;
+    padding: 0px;
+  }
+
+    .form .sections .section .full-description p {
+      text-align: center;
+    }
+
+  .form .sections .section .buttons {
+    text-align: center;
+  }
+
+    .form .sections .section .buttons a.edit,
+    .form .sections .section .buttons a.tips {
+      color: #000;
+    }
+
+      .form .sections .section .buttons a.edit.active,
+      .form .sections .section .buttons a.tips.active {
+      }
+
+      .form .sections .section .buttons a.edit img,
+      .form .sections .section .buttons a.tips img {
+        vertical-align: middle;
+        height: 50px;
+      }
+
+      .form .sections .section .buttons a.edit span,
+      .form .sections .section .buttons a.tips span {
+        vertical-align: middle;
+      }
+
+        .form .sections .section .buttons a.tips span.view {
+        }
+
+        .form .sections .section .buttons a.tips span.hide {
+          display: none;
+        }
+
+
+  .form .sections > p .price,
+  .form .sections .section > p .price,
+  .form .sections .section .contrast-container > p .price {
+    color: #96B21F;
+  }
+
+  .form .sections .section .contrast-container > p {
+  }
+
+  .form .sections .section .contrast-container > h2 {
+  }
+
+  .form .sections > h2.margin,
+  .form .sections .section > h2.margin,
+  .form .sections > p.margin,
+  .form .sections .section > p.margin {
+    margin: 0px 0px 0px 30px;
+  }
+
+.form .accordion .sections > h2,
+.form .accordion .sections .section > h2,
+.form .accordion .sections > p,
+.form .accordion .sections .section > p,
+.form.dark .sections > h2,
+.form.dark .sections .section > h2,
+.form.dark .sections > p,
+.form.dark .sections .section > p {
+  color: #fff;
+}
+
+.form .accordion hr {
+  background: #fff;
+}
+
+
+.form .sections .section {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 30px;
+  padding-bottom: 30px;
+  display: inline;
+  float: left;
+  /*overflow					: hidden;*/
+}
+
+  .form .sections .section.block {
+    display: block;
+    float: none;
+  }
+
+.form .sections.top-space-50 .section {
+  padding-top: 50px;
+}
+
+.form .sections .section.mobile-hidden {
+}
+
+.form .sections .section.size-20p {
+  width: 20%;
+}
+
+
+.form .sections .section.size-1 {
+  width: 8.33%;
+}
+
+.form .sections .section.size-2 {
+  width: 16.66%;
+}
+
+.form .sections .section.size-3 {
+  width: 25%;
+}
+
+.form .sections .section.size-4 {
+  width: 33.33%;
+}
+
+.form .sections .section.size-5 {
+  width: 41.66%;
+}
+
+.form .sections .section.size-6 {
+  width: 50%;
+}
+
+.form .sections .section.size-7 {
+  width: 58.33%;
+}
+
+.form .sections .section.size-8 {
+  width: 66.66%;
+}
+
+.form .sections .section.size-9 {
+  width: 75%;
+}
+
+.form .sections .section.size-10 {
+  width: 83.33%;
+}
+
+.form .sections .section.size-11 {
+  width: 91.66%;
+}
+
+.form .sections .section.size-12 {
+  width: 100%;
+}
+
+.form .sections .section.full {
+  width: 100%;
+}
+
+.form .sections .section.align-left {
+  text-align: left
+}
+
+.form .sections .section.align-center {
+  text-align: center
+}
+
+.form .sections .section.align-right {
+  text-align: right
+}
+
+.form .sections .section.size-1.align-left,
+.form .sections .section.size-2.align-left,
+.form .sections .section.size-3.align-left,
+.form .sections .section.size-1.align-center,
+.form .sections .section.size-2.align-center,
+.form .sections .section.size-3.align-center,
+.form .sections .section.size-1.align-right,
+.form .sections .section.size-2.align-right,
+.form .sections .section.size-3.align-right {
+}
+
+.form .sections .section.size-6.align-left,
+.form .sections .section.size-7.align-left,
+.form .sections .section.size-8.align-left,
+.form .sections .section.size-9.align-left,
+.form .sections .section.size-10.align-left,
+.form .sections .section.size-11.align-left,
+.form .sections .section.size-12.align-left,
+.form .sections .section.size-6.align-center,
+.form .sections .section.size-7.align-center,
+.form .sections .section.size-8.align-center,
+.form .sections .section.size-9.align-center,
+.form .sections .section.size-10.align-center,
+.form .sections .section.size-11.align-center,
+.form .sections .section.size-12.align-center,
+.form .sections .section.size-6.align-right,
+.form .sections .section.size-7.align-right,
+.form .sections .section.size-8.align-right,
+.form .sections .section.size-9.align-right,
+.form .sections .section.size-10.align-right,
+.form .sections .section.size-11.align-right,
+.form .sections .section.size-12.align-right {
+}
+
+.form .sections .section.column-70pct {
+  width: 70%;
+  margin: 0px 15%;
+}
+
+.form .sections .section.column-80pct {
+  width: 80%;
+  margin: 0px 10%;
+}
+
+.form .sections .section.column-90pct {
+  width: 90%;
+  margin: 0px 5%;
+}
+
+.form .sections .section ul.list {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px 0px 20px;
+}
+
+  .form .sections .section ul.list li,
+  .form .sections .section .comments {
+    margin: 0px;
+    padding: 0px 15% 20px 15%;
+    overflow: hidden;
+    position: relative;
+  }
+
+    .form .sections .section ul.list li p.name,
+    .form .sections .section ul.list li p.value {
+      margin: 0px;
+      padding: 10px 0px 0px;
+      text-align: left;
+      float: left;
+      display: inline;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -o-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    .form .sections .section ul.list li p.name {
+      width: 40%;
+    }
+
+    .form .sections .section ul.list li p.value {
+      width: 60%;
+      padding-right: 50px;
+    }
+
+.minevalg .sections .section img.edit,
+.minevalg .sections .section img.delete {
+  position: absolute;
+  top: -5px;
+  right: 15%;
+  height: 50px;
+  cursor: pointer;
+}
+
+
+
+.form .sections .section label {
+  display: block;
+  padding: 0px 0px 6px 3px;
+  font-family: Montserrat, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+  color: #fff;
+  width: 100%;
+  position: relative;
+}
+
+.form .sections .section span.price {
+  color: #96B21F;
+  font-size: 16px;
+}
+
+.form .sections .section.error.error-phone label:before,
+.form .sections .section.error.error-email label:before,
+.form .sections .section.error.error-date label:before,
+.form .sections .section.error.error-zip label:before {
+  color: #f66;
+  position: absolute;
+  top: 90px;
+  right: 5px;
+  font-size: 16px;
+}
+
+.form .sections .section.error.error-phone label:before {
+  content: 'Er nummeret riktig?';
+}
+
+.form .sections .section.error.error-email label:before {
+  content: 'Er e-posten riktig?';
+}
+
+.form .sections .section.error.error-date label:before {
+  content: 'Er datoen riktig?';
+}
+
+.form .sections .section.error.error-zip label:before {
+  content: 'Er nummeret riktig?';
+}
+
+.form .sections .section input[type="text"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  display: block;
+  border: 1px solid #3b3b3b;
+  padding: 12px;
+  font-size: 24px;
+  line-height: 24px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -o-border-radius: 0px;
+  border-radius: 0px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+}
+
+.form .sections .section.error input[type="text"] {
+  border: 1px solid #f66;
+  -webkit-animation: textfield-error 1s linear 0s 1 normal forwards;
+  -moz-animation: textfield-error 1s linear 0s 1 normal forwards;
+  -o-animation: textfield-error 1s linear 0s 1 normal forwards;
+  animation: textfield-error 1s linear 0s 1 normal forwards;
+}
+
+.form .sections .section textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 300px;
+  display: block;
+  border: 1px solid #3b3b3b;
+  padding: 12px;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.form button.button-straight {
+  display: inline-block;
+  padding: 20px 60px;
+  background: #96b21f;
+  font-family: Montserrat, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: #fff;
+  border: 0px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.form button.button-section {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  height: 120px;
+  background: #aaa;
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid #fff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  font-family: Montserrat, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  border: 0px;
+  padding: 0px;
+  margin: 0px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+
+  .form button.button-section img {
+    vertical-align: middle;
+    padding-right: 5%;
+    height: 70%;
+  }
+
+  .form button.button-section span {
+    padding: 0px;
+    margin: 0px;
+    vertical-align: middle;
+  }
+
+
+.form .checkbox-text,
+.form [type="checkbox"]:not(:checked) + label,
+.form [type="checkbox"]:checked + label,
+.form [type="radio"]:not(:checked) + label,
+.form [type="radio"]:checked + label {
+  display: inline-block;
+  padding: 10px 60px 10px 0px;
+  width: auto;
+  vertical-align: middle;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Base for label styling */
+
+.form [type="checkbox"]:not(:checked),
+.form [type="checkbox"]:checked,
+.form [type="radio"]:not(:checked),
+.form [type="radio"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+
+  .form [type="checkbox"]:not(:checked) + label,
+  .form [type="checkbox"]:checked + label,
+  .form [type="radio"]:not(:checked) + label,
+  .form [type="radio"]:checked + label,
+  .form span.checkbox-checked {
+    position: relative;
+  }
+
+  .form [type="checkbox"]:not(:checked) + label,
+  .form [type="checkbox"]:checked + label,
+  .form [type="radio"]:not(:checked) + label,
+  .form [type="radio"]:checked + label {
+    cursor: pointer;
+  }
+    /* checkbox aspect */
+
+    .form [type="checkbox"]:not(:checked) + label:before,
+    .form [type="checkbox"]:checked + label:before,
+    .form [type="radio"]:not(:checked) + label:before,
+    .form [type="radio"]:checked + label:before,
+    .form span.checkbox-checked:before {
+      content: '';
+      position: absolute;
+      right: 4px;
+      top: 0px;
+      width: 40px;
+      height: 40px;
+      border: 1px solid #fff;
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px;
+    }
+
+
+    /* checked mark aspect */
+
+    .form [type="checkbox"]:not(:checked) + label:after,
+    .form [type="checkbox"]:checked + label:after,
+    .form [type="radio"]:not(:checked) + label:after,
+    .form [type="radio"]:checked + label:after,
+    .form span.checkbox-checked:after {
+      content: '\2713';
+      position: absolute;
+      top: 11px;
+      right: 5px;
+      font-size: 40px;
+      font-weight: bold;
+      color: #fff;
+      text-align: center;
+      width: 40px;
+      -webkit-transition: all .1s;
+      -moz-transition: all .1s;
+      -o-transition: all .1s;
+      transition: all .1s;
+    }
+
+    /* checked mark aspect changes */
+
+    .form [type="checkbox"]:not(:checked) + label:after,
+    .form [type="radio"]:not(:checked) + label:after {
+      opacity: 0;
+      transform: scale(0) rotate(-25deg);
+    }
+
+    .form [type="checkbox"]:checked + label:after,
+    .form [type="radio"]:checked + label:after {
+      opacity: 1;
+      transform: scale(1) rotate(0deg);
+    }
+
+    .form [type="checkbox"]:checked + label:before,
+    .form [type="radio"]:checked + label:before {
+    }
+/* disabled checkbox */
+
+.form [type="radio"]:disabled:not(:checked) + label:before,
+.form [type="radio"]:disabled:checked + label:before,
+.form [type="checkbox"]:disabled:not(:checked) + label:before,
+.form [type="checkbox"]:disabled:checked + label:before {
+  box-shadow: none;
+  border-color: #bbb;
+  background-color: #ddd;
+}
+
+.form [type="checkbox"]:disabled:checked + label:after,
+.form [type="radio"]:disabled:checked + label:after {
+  color: #999;
+}
+
+.form [type="checkbox"]:disabled + label,
+.form [type="radio"]:disabled + label {
+  color: #aaa;
+}
+/* accessibility */
+
+/*
+[type="checkbox"]:checked:focus + label:before,
+[type="checkbox"]:not(:checked):focus + label:before {
+  border: 1px dotted #7d861e;
+}
+*/
+/* hover style just for information */
+section.accordion.seremoni h3 {
+  font-size: 26px;
+  line-height: 32px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+}
+
+section.accordion.seremoni p {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.form .sections .section section.accordion.musikk .comments,
+.form .sections .section section.accordion.salmer .comments {
+  margin-top: 20px;
+}
+
+.form .sections .section section.accordion.musikk textarea,
+.form .sections .section section.accordion.salmer textarea {
+  margin-top: 10px;
+  height: 100px;
+}
+
+.blomster section > div {
+}
+
+  .blomster section > div > div.info {
+    padding: 0px 0px 40px;
+    margin: 0px 0px 40px;
+    border-bottom: 1px solid #fff;
+    overflow: hidden;
+    opacity: 1;
+    max-height: 400px;
+  }
+
+.blomster section.checked > div > div.info {
+  padding: 0px 0px 0px;
+  margin: 0px 0px 0px;
+  border-bottom: 0px;
+  opacity: 0;
+  max-height: 0px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  /*display						: none;*/
+}
+
+.blomster section > div > div.info > img {
+  display: inline;
+  float: left;
+  width: 33%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.blomster section.checked > div > div.info img {
+  /*width						: 40px;*/
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.blomster section > div > div.info p {
+  padding: 0px 0px 0px 20px;
+  margin: 0px 0px 0px 33%;
+  overflow: hidden;
+}
+
+  .blomster section > div > div.info p.price {
+    padding: 20px 0px 20px 20px;
+    color: #96B21F;
+    font-weight: bold;
+  }
+
+.blomster section > div > ul {
+  padding: 0px 25px;
+  margin: 0px;
+}
+
+.blomster section > div > ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+  .blomster section > div > ul > li {
+    display: block;
+    overflow: hidden;
+    padding: 0px 0px 40px;
+    margin: 0px 0px 40px;
+    border-bottom: 1px solid #fff;
+    opacity: 0;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+
+    .blomster section > div > ul > li.initialized {
+      /*margin						: 0px 0px 20px 0px;*/
+      opacity: 1;
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s;
+    }
+
+    .blomster section > div > ul > li span.symbol-button.minus {
+      float: right;
+    }
+
+    .blomster section > div > ul > li img {
+      display: inline;
+      float: left;
+      width: 150px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -o-border-radius: 5px;
+      border-radius: 5px;
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s;
+    }
+
+    .blomster section > div > ul > li > div.settings {
+      margin-left: 170px;
+    }
+
+      .blomster section > div > ul > li > div.settings ul.color-choices {
+        padding-right: 30px;
+      }
+
+      .blomster section > div > ul > li > div.settings .price {
+        color: #96B21F;
+        font-weight: bold;
+      }
+
+    .blomster section > div > ul > li > div.text {
+      margin-left: 170px;
+      display: none;
+    }
+
+    .blomster section > div > ul > li.card > div.text,
+    .blomster section > div > ul > li.band > div.text {
+      display: block;
+    }
+
+    .blomster section > div > ul > li > div.text .card,
+    .blomster section > div > ul > li > div.text .band {
+      display: none;
+    }
+
+    .blomster section > div > ul > li.card > div.text .card,
+    .blomster section > div > ul > li.band > div.text .band {
+      display: inline;
+    }
+
+    .blomster section > div > ul > li > div.text > p {
+      padding: 20px 0px 10px;
+      margin: 0px;
+    }
+
+.form .sections .section .blomster section > div > ul > li > div.text > textarea {
+}
+
+.blomster section > div span.symbol-button.plus {
+  float: right;
+}
+
+  .blomster section > div span.symbol-button.plus .add {
+    display: none;
+  }
+
+.blomster section.checked > div span.symbol-button.plus .choose {
+  display: none;
+}
+
+.blomster section.checked > div span.symbol-button.plus .add {
+  display: inline;
+}
+
+.blomster section > div span.num-chosen {
+  float: left;
+  padding-top: 10px;
+}
+
+  .blomster section > div span.num-chosen span {
+    vertical-align: middle;
+  }
+
+  .blomster section > div span.num-chosen .text {
+  }
+
+  .blomster section > div span.num-chosen .single,
+  .blomster section > div span.num-chosen .multiple {
+  }
+
+  .blomster section > div span.num-chosen .num {
+  }
+
+.minevalg .sections .section p[data-id="byratjenester"] span {
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.minevalg .sections .section .buttons a.edit {
+  color: #96B21F;
+}
+
+.minevalg .sections .section.deathnotice img.deathnotice-motif {
+  width: 30%;
+  border: 1px solid #000;
+}
+
+.minevalg .sections .section.blomster ul.list > li {
+  padding: 0px 25% 20px 25%;
+}
+
+.minevalg .sections .section.blomster ul.list li > div {
+  position: relative;
+  border-top: 1px solid #000;
+  padding: 20px 20px 0px;
+}
+
+.minevalg .sections .section.blomster ul.list li:first-child > div {
+  border-top: 0px;
+}
+
+.minevalg .sections .section.blomster ul.list li > div img.product {
+  width: 100px;
+  float: left;
+}
+
+.minevalg .sections .section.blomster ul.list li > div img.edit {
+  right: 70px;
+  top: 25px;
+}
+
+.minevalg .sections .section.blomster ul.list li > div img.delete {
+  right: 20px;
+  top: 25px;
+}
+
+.minevalg .sections .section.blomster ul.list li > div > div {
+  margin-left: 120px;
+  padding: 20px 0px 0px;
+}
+
+  .minevalg .sections .section.blomster ul.list li > div > div h2 {
+    font-size: 20px;
+  }
+
+.minevalg .sections .section.comments {
+}
+
+  .minevalg .sections .section.comments textarea {
+    width: 70%;
+    margin: 0px 15%;
+  }
+
+.accordion.dodsannonse .example img {
+  /*normal*/
+  width: 100%;
+  /**/
+}
+
+.accordion.dodsannonse .size-3 {
+  /*normal*/
+  width: 25% !important;
+  /**/
+}
+
+.accordion.dodsannonse .size-9 {
+  /*normal*/
+  width: 75% !important;
+  /**/
+}
+
+.accordion.dodsannonse textarea {
+  /*normal*/
+  min-height: 250px;
+  /**/
+  /*480*/
+  min-height: 150px;
+  /**/
+}
+
+.containers .content .scrollbox .accordion.dodsannonse ul.horizontal-choices {
+  text-align: center;
+}
+
+  .containers .content .scrollbox .accordion.dodsannonse ul.horizontal-choices li {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    margin: 0px 5px;
+    border: 0px;
+  }
+
+    .containers .content .scrollbox .accordion.dodsannonse ul.horizontal-choices li.active:before {
+      width: 78px;
+      height: 78px;
+    }
+
+    .containers .content .scrollbox .accordion.dodsannonse ul.horizontal-choices li img {
+      width: 100%;
+    }
+
+@media only screen and (max-width: 1300px) {
+  /** choice checkmark **/
+  @-webkit-keyframes choice-checkmark-anim {
+    0% {
+      clip: rect(94px, 0px, 94px, 0);
+    }
+
+    100% {
+      clip: rect(0px, 94px, 94px, 0);
+    }
+  }
+
+  @keyframes choice-checkmark-anim {
+    0% {
+      clip: rect(94px, 0px, 94px, 0);
+    }
+
+    100% {
+      clip: rect(0px, 94px, 94px, 0);
+    }
+  }
+
+  /** accordion checkmark **/
+  @-webkit-keyframes accordion-checkmark-anim {
+    0% {
+      clip: rect(60px, 0px, 60px, 0);
+    }
+
+    100% {
+      clip: rect(0px, 60px, 60px, 0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes accordion-checkmark-anim {
+    0% {
+      clip: rect(60px, 0px, 60px, 0);
+    }
+
+    100% {
+      clip: rect(0px, 60px, 60px, 0);
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes accordion-checkmark-bk-anim {
+    0% {
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes accordion-checkmark-bk-anim {
+    0% {
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  /** blomster add **/
+  @-webkit-keyframes blomster-add {
+    0% {
+      opacity: 1;
+      max-height: 400px;
+    }
+
+    100% {
+      opacity: 0;
+      max-height: 0px;
+    }
+  }
+
+  @keyframes blomster-add {
+    0% {
+      opacity: 1;
+      max-height: 200px;
+    }
+
+    100% {
+      opacity: 0;
+      max-height: 0px;
+    }
+  }
+
+  /** text field error **/
+  @-webkit-keyframes textfield-error {
+    0% {
+      background: #f66;
+    }
+
+    100% {
+      background: #fff;
+    }
+  }
+
+  @keyframes textfield-error {
+    0% {
+      background: #f66;
+    }
+
+    100% {
+      background: #fff;
+    }
+  }
+  
+  article, aside, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+  }
+
+  /**
+
+	PAGE
+
+**/
+
+  h1 {
+  }
+
+  h2 {
+  }
+
+  * {
+    font-family: Montserrat, Arial, sans-serif;
+  }
+
+  p {
+  }
+
+  p, li {
+  }
+
+  button {
+  }
+
+  hr {
+  }
+
+  .dark hr {
+  }
+
+  button:hover {
+  }
+
+  .f-left {
+  }
+
+  .f-right {
+  }
+
+  .t-left {
+  }
+
+  .t-center {
+  }
+
+  .t-right {
+  }
+
+  .normal-hidden {
+  }
+
+  .info-no-javascript {
+  }
+
+  .pt20 {
+  }
+
+  div.backgrounds {
+  }
+
+    div.backgrounds div {
+    }
+
+      div.backgrounds div.forside,
+      div.backgrounds div.seremoni {
+      }
+
+      div.backgrounds div.blomster {
+      }
+
+      div.backgrounds div.kisteurne {
+      }
+
+      div.backgrounds div.blank {
+      }
+
+
+  .width-controller {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+
+  ul.main-menu { /** width and margins controlled by .width-controller **/
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+
+  .text-editing ul.main-menu {
+  }
+
+  ul.main-menu::before {
+  }
+
+  ul.main-menu li {
+  }
+
+    ul.main-menu li.item-1 {
+    }
+
+    ul.main-menu li.item-2 {
+    }
+
+    ul.main-menu li.item-3 {
+    }
+
+    ul.main-menu li.item-4 {
+    }
+
+    ul.main-menu li.item-5 {
+    }
+
+    ul.main-menu li img {
+    }
+
+    ul.main-menu li.active img {
+    }
+
+
+  div.containers {
+    height: 81%; /* 81 */
+  }
+
+  .text-editing div.containers {
+  }
+
+  .top-line {
+  }
+
+  .text-editing .top-line {
+  }
+
+  .top-line .logo {
+  }
+
+  .top-line p {
+  }
+
+  .top-line .my-choices {
+  }
+
+  .top-line .price {
+  }
+
+    .top-line .price .info {
+    }
+
+  .top-line .message {
+  }
+
+    .top-line .message span {
+    }
+
+      .top-line .message span.in {
+      }
+
+      .top-line .message span.out {
+      }
+
+
+
+
+
+  span.symbol-button {
+  }
+
+    span.symbol-button:before,
+    span.symbol-button:after {
+    }
+
+    span.symbol-button:before {
+    }
+
+    span.symbol-button:after {
+    }
+
+    span.symbol-button.plus:after {
+    }
+
+    span.symbol-button.minus:after {
+    }
+
+  ::-webkit-scrollbar {
+    width: 0px; /* remove scrollbar space */
+    background: transparent; /* optional: just make scrollbar invisible */
+  }
+
+  .scrollboxes {
+  }
+
+    .scrollboxes .content {
+    }
+
+  .text-editing .scrollboxes .content {
+  }
+
+  .scrollboxes .content.down {
+  }
+
+  .scrollboxes .content.up {
+  }
+
+    .scrollboxes .content.up.down {
+    }
+
+  .scrollboxes .content .scrollbox {
+  }
+
+
+    .scrollboxes .content .scrollbox.dark {
+    }
+
+    .scrollboxes .content .scrollbox .contrast-container.mobile {
+    }
+
+
+    .scrollboxes .content .scrollbox h1 {
+    }
+
+    .scrollboxes .content .scrollbox.dark h1 {
+    }
+
+    .scrollboxes .content .scrollbox h1 span {
+    }
+
+    .scrollboxes .content .scrollbox .heading img {
+    }
+
+  .form .sections {
+  }
+
+    .form .sections > h2,
+    .form .sections .section > h2,
+    .form .sections .section .contrast-container > h2 {
+    }
+
+    .form .sections > p,
+    .form .sections .section > p,
+    .form .sections .section .contrast-container > p {
+    }
+
+
+    .form .sections .section .full-description {
+    }
+
+      .form .sections .section .full-description p {
+      }
+
+    .form .sections .section .buttons {
+    }
+
+      .form .sections .section .buttons a.edit,
+      .form .sections .section .buttons a.tips {
+      }
+
+        .form .sections .section .buttons a.edit.active,
+        .form .sections .section .buttons a.tips.active {
+        }
+
+        .form .sections .section .buttons a.edit img,
+        .form .sections .section .buttons a.tips img {
+        }
+
+        .form .sections .section .buttons a.edit span,
+        .form .sections .section .buttons a.tips span {
+        }
+
+          .form .sections .section .buttons a.tips span.view {
+          }
+
+          .form .sections .section .buttons a.tips span.hide {
+          }
+
+
+    .form .sections > p .price,
+    .form .sections .section > p .price,
+    .form .sections .section .contrast-container > p .price {
+    }
+
+    .form .sections .section .contrast-container > p {
+    }
+
+    .form .sections .section .contrast-container > h2 {
+    }
+
+    .form .sections > h2.margin,
+    .form .sections .section > h2.margin,
+    .form .sections > p.margin,
+    .form .sections .section > p.margin {
+    }
+
+  .form .accordion .sections > h2,
+  .form .accordion .sections .section > h2,
+  .form .accordion .sections > p,
+  .form .accordion .sections .section > p,
+  .form.dark .sections > h2,
+  .form.dark .sections .section > h2,
+  .form.dark .sections > p,
+  .form.dark .sections .section > p {
+  }
+
+  .form .accordion hr {
+  }
+
+
+  .form .sections .section {
+  }
+
+    .form .sections .section.block {
+    }
+
+  .form .sections.top-space-50 .section {
+  }
+
+  .form .sections .section.mobile-hidden {
+  }
+
+  .form .sections .section.size-20p {
+  }
+
+
+  .form .sections .section.size-1 {
+  }
+
+  .form .sections .section.size-2 {
+  }
+
+  .form .sections .section.size-3 {
+  }
+
+  .form .sections .section.size-4 {
+  }
+
+  .form .sections .section.size-5 {
+  }
+
+  .form .sections .section.size-6 {
+  }
+
+  .form .sections .section.size-7 {
+  }
+
+  .form .sections .section.size-8 {
+  }
+
+  .form .sections .section.size-9 {
+  }
+
+  .form .sections .section.size-10 {
+  }
+
+  .form .sections .section.size-11 {
+  }
+
+  .form .sections .section.size-12 {
+  }
+
+  .form .sections .section.full {
+  }
+
+  .form .sections .section.align-center {
+  }
+
+  .form .sections .section.align-right {
+  }
+
+  .form .sections .section.size-1.align-left,
+  .form .sections .section.size-2.align-left,
+  .form .sections .section.size-3.align-left,
+  .form .sections .section.size-1.align-center,
+  .form .sections .section.size-2.align-center,
+  .form .sections .section.size-3.align-center,
+  .form .sections .section.size-1.align-right,
+  .form .sections .section.size-2.align-right,
+  .form .sections .section.size-3.align-right {
+  }
+
+  .form .sections .section.size-4.align-left,
+  .form .sections .section.size-5.align-left,
+  .form .sections .section.size-4.align-center,
+  .form .sections .section.size-5.align-center,
+  .form .sections .section.size-4.align-right,
+  .form .sections .section.size-5.align-right {
+  }
+
+  .form .sections .section.size-6.align-left,
+  .form .sections .section.size-7.align-left,
+  .form .sections .section.size-8.align-left,
+  .form .sections .section.size-9.align-left,
+  .form .sections .section.size-10.align-left,
+  .form .sections .section.size-11.align-left,
+  .form .sections .section.size-12.align-left,
+  .form .sections .section.size-6.align-center,
+  .form .sections .section.size-7.align-center,
+  .form .sections .section.size-8.align-center,
+  .form .sections .section.size-9.align-center,
+  .form .sections .section.size-10.align-center,
+  .form .sections .section.size-11.align-center,
+  .form .sections .section.size-12.align-center,
+  .form .sections .section.size-6.align-right,
+  .form .sections .section.size-7.align-right,
+  .form .sections .section.size-8.align-right,
+  .form .sections .section.size-9.align-right,
+  .form .sections .section.size-10.align-right,
+  .form .sections .section.size-11.align-right,
+  .form .sections .section.size-12.align-right {
+  }
+
+  .form .sections .section.column-70pct {
+  }
+
+  .form .sections .section.column-80pct {
+  }
+
+  .form .sections .section.column-90pct {
+  }
+
+  .form .sections .section ul.list {
+  }
+
+    .form .sections .section ul.list li,
+    .form .sections .section .comments {
+    }
+
+      .form .sections .section ul.list li p.name,
+      .form .sections .section ul.list li p.value {
+      }
+
+      .form .sections .section ul.list li p.name {
+      }
+
+      .form .sections .section ul.list li p.value {
+      }
+
+  .minevalg .sections .section img.edit,
+  .minevalg .sections .section img.delete {
+  }
+
+
+
+  .form .sections .section label {
+  }
+
+  .form .sections .section span.price {
+  }
+
+  .form .sections .section.error.error-phone label:before,
+  .form .sections .section.error.error-email label:before,
+  .form .sections .section.error.error-date label:before,
+  .form .sections .section.error.error-zip label:before {
+  }
+
+  .form .sections .section.error.error-phone label:before {
+  }
+
+  .form .sections .section.error.error-email label:before {
+  }
+
+  .form .sections .section.error.error-date label:before {
+  }
+
+  .form .sections .section.error.error-zip label:before {
+  }
+
+  .form .sections .section input[type="text"] {
+  }
+
+  .form .sections .section.error input[type="text"] {
+  }
+
+  .form .sections .section textarea {
+  }
+
+  .form button.button-straight {
+  }
+
+  .form button.button-section {
+  }
+
+    .form button.button-section img {
+    }
+
+    .form button.button-section span {
+    }
+
+
+  .form .checkbox-text,
+  .form [type="checkbox"]:not(:checked) + label,
+  .form [type="checkbox"]:checked + label,
+  .form [type="radio"]:not(:checked) + label,
+  .form [type="radio"]:checked + label {
+  }
+
+  /* Base for label styling */
+
+  .form [type="checkbox"]:not(:checked),
+  .form [type="checkbox"]:checked,
+  .form [type="radio"]:not(:checked),
+  .form [type="radio"]:checked {
+  }
+
+    .form [type="checkbox"]:not(:checked) + label,
+    .form [type="checkbox"]:checked + label,
+    .form [type="radio"]:not(:checked) + label,
+    .form [type="radio"]:checked + label,
+    .form span.checkbox-checked {
+    }
+
+    .form [type="checkbox"]:not(:checked) + label,
+    .form [type="checkbox"]:checked + label,
+    .form [type="radio"]:not(:checked) + label,
+    .form [type="radio"]:checked + label {
+    }
+      /* checkbox aspect */
+
+      .form [type="checkbox"]:not(:checked) + label:before,
+      .form [type="checkbox"]:checked + label:before,
+      .form [type="radio"]:not(:checked) + label:before,
+      .form [type="radio"]:checked + label:before,
+      .form span.checkbox-checked:before {
+      }
+
+
+      /* checked mark aspect */
+
+      .form [type="checkbox"]:not(:checked) + label:after,
+      .form [type="checkbox"]:checked + label:after,
+      .form [type="radio"]:not(:checked) + label:after,
+      .form [type="radio"]:checked + label:after,
+      .form span.checkbox-checked:after {
+      }
+
+      /* checked mark aspect changes */
+
+      .form [type="checkbox"]:not(:checked) + label:after,
+      .form [type="radio"]:not(:checked) + label:after {
+        opacity: 0;
+        transform: scale(0) rotate(-25deg);
+      }
+
+      .form [type="checkbox"]:checked + label:after,
+      .form [type="radio"]:checked + label:after {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+      }
+
+      .form [type="checkbox"]:checked + label:before,
+      .form [type="radio"]:checked + label:before {
+      }
+  /* disabled checkbox */
+
+  .form [type="radio"]:disabled:not(:checked) + label:before,
+  .form [type="radio"]:disabled:checked + label:before,
+  .form [type="checkbox"]:disabled:not(:checked) + label:before,
+  .form [type="checkbox"]:disabled:checked + label:before {
+    box-shadow: none;
+    border-color: #bbb;
+    background-color: #ddd;
+  }
+
+  .form [type="checkbox"]:disabled:checked + label:after,
+  .form [type="radio"]:disabled:checked + label:after {
+    color: #999;
+  }
+
+  .form [type="checkbox"]:disabled + label,
+  .form [type="radio"]:disabled + label {
+    color: #aaa;
+  }
+  /* accessibility */
+
+  /*
+[type="checkbox"]:checked:focus + label:before,
+[type="checkbox"]:not(:checked):focus + label:before {
+  border: 1px dotted #7d861e;
+}
+*/
+  /* hover style just for information */
+  .containers .content .scrollbox ul.horizontal-choices {
+  }
+
+    .containers .content .scrollbox ul.horizontal-choices li {
+    }
+
+      .containers .content .scrollbox ul.horizontal-choices li.active:before {
+      }
+
+      .containers .content .scrollbox ul.horizontal-choices li img {
+      }
+
+      .containers .content .scrollbox ul.horizontal-choices li.white {
+      }
+
+      .containers .content .scrollbox ul.horizontal-choices li.offwhite {
+      }
+
+      .containers .content .scrollbox ul.horizontal-choices li.pastel {
+      }
+
+      .containers .content .scrollbox ul.horizontal-choices li.pink {
+      }
+
+      .containers .content .scrollbox ul.horizontal-choices li.red {
+      }
+
+      .containers .content .scrollbox ul.horizontal-choices li.orange {
+      }
+
+      .containers .content .scrollbox ul.horizontal-choices li.green {
+      }
+
+      .containers .content .scrollbox ul.horizontal-choices li.blue {
+      }
+
+      .containers .content .scrollbox ul.horizontal-choices li.purple {
+      }
+
+  .form .sections {
+  }
+
+    .form .sections > h2,
+    .form .sections .section > h2,
+    .form .sections .section .contrast-container > h2 {
+    }
+
+    .form .sections > p,
+    .form .sections .section > p,
+    .form .sections .section .contrast-container > p {
+    }
+
+
+    .form .sections .section .full-description {
+    }
+
+      .form .sections .section .full-description p {
+      }
+
+    .form .sections .section .buttons {
+    }
+
+      .form .sections .section .buttons a.edit,
+      .form .sections .section .buttons a.tips {
+      }
+
+        .form .sections .section .buttons a.edit.active,
+        .form .sections .section .buttons a.tips.active {
+        }
+
+        .form .sections .section .buttons a.edit img,
+        .form .sections .section .buttons a.tips img {
+        }
+
+        .form .sections .section .buttons a.edit span,
+        .form .sections .section .buttons a.tips span {
+        }
+
+          .form .sections .section .buttons a.tips span.view {
+          }
+
+          .form .sections .section .buttons a.tips span.hide {
+          }
+
+
+    .form .sections > p .price,
+    .form .sections .section > p .price,
+    .form .sections .section .contrast-container > p .price {
+    }
+
+    .form .sections .section .contrast-container > p {
+    }
+
+    .form .sections .section .contrast-container > h2 {
+    }
+
+    .form .sections > h2.margin,
+    .form .sections .section > h2.margin,
+    .form .sections > p.margin,
+    .form .sections .section > p.margin {
+    }
+
+  .form .accordion .sections > h2,
+  .form .accordion .sections .section > h2,
+  .form .accordion .sections > p,
+  .form .accordion .sections .section > p,
+  .form.dark .sections > h2,
+  .form.dark .sections .section > h2,
+  .form.dark .sections > p,
+  .form.dark .sections .section > p {
+  }
+
+  .form .accordion hr {
+  }
+
+
+  .form .sections .section {
+  }
+
+    .form .sections .section.block {
+    }
+
+  .form .sections.top-space-50 .section {
+  }
+
+  .form .sections .section.mobile-hidden {
+  }
+
+  .form .sections .section.size-20p {
+  }
+
+
+  .form .sections .section.size-1 {
+  }
+
+  .form .sections .section.size-2 {
+  }
+
+  .form .sections .section.size-3 {
+  }
+
+  .form .sections .section.size-4 {
+  }
+
+  .form .sections .section.size-5 {
+  }
+
+  .form .sections .section.size-6 {
+  }
+
+  .form .sections .section.size-7 {
+  }
+
+  .form .sections .section.size-8 {
+  }
+
+  .form .sections .section.size-9 {
+  }
+
+  .form .sections .section.size-10 {
+  }
+
+  .form .sections .section.size-11 {
+  }
+
+  .form .sections .section.size-12 {
+  }
+
+  .form .sections .section.full {
+  }
+
+  .form .sections .section.align-center {
+  }
+
+  .form .sections .section.align-right {
+  }
+
+  .form .sections .section.size-1.align-left,
+  .form .sections .section.size-2.align-left,
+  .form .sections .section.size-3.align-left,
+  .form .sections .section.size-1.align-center,
+  .form .sections .section.size-2.align-center,
+  .form .sections .section.size-3.align-center,
+  .form .sections .section.size-1.align-right,
+  .form .sections .section.size-2.align-right,
+  .form .sections .section.size-3.align-right {
+  }
+
+  .form .sections .section.size-4.align-left,
+  .form .sections .section.size-5.align-left,
+  .form .sections .section.size-4.align-center,
+  .form .sections .section.size-5.align-center,
+  .form .sections .section.size-4.align-right,
+  .form .sections .section.size-5.align-right {
+  }
+
+  .form .sections .section.size-6.align-left,
+  .form .sections .section.size-7.align-left,
+  .form .sections .section.size-8.align-left,
+  .form .sections .section.size-9.align-left,
+  .form .sections .section.size-10.align-left,
+  .form .sections .section.size-11.align-left,
+  .form .sections .section.size-12.align-left,
+  .form .sections .section.size-6.align-center,
+  .form .sections .section.size-7.align-center,
+  .form .sections .section.size-8.align-center,
+  .form .sections .section.size-9.align-center,
+  .form .sections .section.size-10.align-center,
+  .form .sections .section.size-11.align-center,
+  .form .sections .section.size-12.align-center,
+  .form .sections .section.size-6.align-right,
+  .form .sections .section.size-7.align-right,
+  .form .sections .section.size-8.align-right,
+  .form .sections .section.size-9.align-right,
+  .form .sections .section.size-10.align-right,
+  .form .sections .section.size-11.align-right,
+  .form .sections .section.size-12.align-right {
+  }
+
+  .form .sections .section.column-70pct {
+  }
+
+  .form .sections .section.column-80pct {
+  }
+
+  .form .sections .section.column-90pct {
+  }
+
+  .form .sections .section ul.list {
+  }
+
+    .form .sections .section ul.list li,
+    .form .sections .section .comments {
+    }
+
+      .form .sections .section ul.list li p.name,
+      .form .sections .section ul.list li p.value {
+      }
+
+      .form .sections .section ul.list li p.name {
+      }
+
+      .form .sections .section ul.list li p.value {
+      }
+
+  .minevalg .sections .section img.edit,
+  .minevalg .sections .section img.delete {
+  }
+
+
+
+  .form .sections .section label {
+  }
+
+  .form .sections .section span.price {
+  }
+
+  .form .sections .section.error.error-phone label:before,
+  .form .sections .section.error.error-email label:before,
+  .form .sections .section.error.error-date label:before,
+  .form .sections .section.error.error-zip label:before {
+  }
+
+  .form .sections .section.error.error-phone label:before {
+  }
+
+  .form .sections .section.error.error-email label:before {
+  }
+
+  .form .sections .section.error.error-date label:before {
+  }
+
+  .form .sections .section.error.error-zip label:before {
+  }
+
+  .form .sections .section input[type="text"] {
+  }
+
+  .form .sections .section.error input[type="text"] {
+  }
+
+  .form .sections .section textarea {
+  }
+
+  .form button.button-straight {
+  }
+
+  .form button.button-section {
+  }
+
+    .form button.button-section img {
+    }
+
+    .form button.button-section span {
+    }
+
+
+  .form .checkbox-text,
+  .form [type="checkbox"]:not(:checked) + label,
+  .form [type="checkbox"]:checked + label,
+  .form [type="radio"]:not(:checked) + label,
+  .form [type="radio"]:checked + label {
+  }
+
+  /* Base for label styling */
+
+  .form [type="checkbox"]:not(:checked),
+  .form [type="checkbox"]:checked,
+  .form [type="radio"]:not(:checked),
+  .form [type="radio"]:checked {
+  }
+
+    .form [type="checkbox"]:not(:checked) + label,
+    .form [type="checkbox"]:checked + label,
+    .form [type="radio"]:not(:checked) + label,
+    .form [type="radio"]:checked + label,
+    .form span.checkbox-checked {
+    }
+
+    .form [type="checkbox"]:not(:checked) + label,
+    .form [type="checkbox"]:checked + label,
+    .form [type="radio"]:not(:checked) + label,
+    .form [type="radio"]:checked + label {
+    }
+      /* checkbox aspect */
+
+      .form [type="checkbox"]:not(:checked) + label:before,
+      .form [type="checkbox"]:checked + label:before,
+      .form [type="radio"]:not(:checked) + label:before,
+      .form [type="radio"]:checked + label:before,
+      .form span.checkbox-checked:before {
+      }
+
+
+      /* checked mark aspect */
+
+      .form [type="checkbox"]:not(:checked) + label:after,
+      .form [type="checkbox"]:checked + label:after,
+      .form [type="radio"]:not(:checked) + label:after,
+      .form [type="radio"]:checked + label:after,
+      .form span.checkbox-checked:after {
+      }
+
+      /* checked mark aspect changes */
+
+      .form [type="checkbox"]:not(:checked) + label:after,
+      .form [type="radio"]:not(:checked) + label:after {
+        opacity: 0;
+        transform: scale(0) rotate(-25deg);
+      }
+
+      .form [type="checkbox"]:checked + label:after,
+      .form [type="radio"]:checked + label:after {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+      }
+
+      .form [type="checkbox"]:checked + label:before,
+      .form [type="radio"]:checked + label:before {
+      }
+  /* disabled checkbox */
+
+  .form [type="radio"]:disabled:not(:checked) + label:before,
+  .form [type="radio"]:disabled:checked + label:before,
+  .form [type="checkbox"]:disabled:not(:checked) + label:before,
+  .form [type="checkbox"]:disabled:checked + label:before {
+    box-shadow: none;
+    border-color: #bbb;
+    background-color: #ddd;
+  }
+
+  .form [type="checkbox"]:disabled:checked + label:after,
+  .form [type="radio"]:disabled:checked + label:after {
+    color: #999;
+  }
+
+  .form [type="checkbox"]:disabled + label,
+  .form [type="radio"]:disabled + label {
+    color: #aaa;
+  }
+ 
+  .blomster section > div span.num-chosen {
+    padding-top: 3px;
+    /**/
+  }
+
+
+  .accordion.dodsannonse .example img {
+    /*normal*/
+    width: 100%;
+    /**/
+  }
+
+  .accordion.dodsannonse .size-3 {
+    /*normal*/
+    width: 25% !important;
+    /**/
+  }
+
+  .accordion.dodsannonse .size-9 {
+    /*normal*/
+    width: 75% !important;
+    /**/
+  }
+
+  .accordion.dodsannonse textarea {
+    /*normal*/
+    min-height: 250px;
+    /**/
+    /*480*/
+    min-height: 150px;
+    /**/
+  }
+
+  .containers .content .scrollbox .accordion.dodsannonse ul.horizontal-choices {
+  }
+
+    .containers .content .scrollbox .accordion.dodsannonse ul.horizontal-choices li {
+    }
+
+      .containers .content .scrollbox .accordion.dodsannonse ul.horizontal-choices li.active:before {
+      }
+
+      .containers .content .scrollbox .accordion.dodsannonse ul.horizontal-choices li img {
+      }
+}
+
+@media only screen and (max-width: 1010px) {
+  /** choice checkmark **/
+  @-webkit-keyframes choice-checkmark-anim {
+    0% {
+      clip: rect(94px, 0px, 94px, 0);
+    }
+
+    100% {
+      clip: rect(0px, 94px, 94px, 0);
+    }
+  }
+
+  @keyframes choice-checkmark-anim {
+    0% {
+      clip: rect(94px, 0px, 94px, 0);
+    }
+
+    100% {
+      clip: rect(0px, 94px, 94px, 0);
+    }
+  }
+
+  /** accordion checkmark **/
+  @-webkit-keyframes accordion-checkmark-anim {
+    0% {
+      clip: rect(60px, 0px, 60px, 0);
+    }
+
+    100% {
+      clip: rect(0px, 60px, 60px, 0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes accordion-checkmark-anim {
+    0% {
+      clip: rect(60px, 0px, 60px, 0);
+    }
+
+    100% {
+      clip: rect(0px, 60px, 60px, 0);
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes accordion-checkmark-bk-anim {
+    0% {
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes accordion-checkmark-bk-anim {
+    0% {
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  /** blomster add **/
+  @-webkit-keyframes blomster-add {
+    0% {
+      opacity: 1;
+      max-height: 400px;
+    }
+
+    100% {
+      opacity: 0;
+      max-height: 0px;
+    }
+  }
+
+  @keyframes blomster-add {
+    0% {
+      opacity: 1;
+      max-height: 200px;
+    }
+
+    100% {
+      opacity: 0;
+      max-height: 0px;
+    }
+  }
+
+  /** text field error **/
+  @-webkit-keyframes textfield-error {
+    0% {
+      background: #f66;
+    }
+
+    100% {
+      background: #fff;
+    }
+  }
+
+  @keyframes textfield-error {
+    0% {
+      background: #f66;
+    }
+
+    100% {
+      background: #fff;
+    }
+  }
+
+    ul.choices.image li .image div p {
+      font-size: 12px;
+      line-height: 17px;
+    }
+
+  article, aside, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+  }
+
+  /**
+
+	PAGE
+
+**/
+
+  h1 {
+  }
+
+  h2 {
+  }
+
+  * {
+    font-family: Montserrat, Arial, sans-serif;
+  }
+
+  p {
+  }
+
+
+  .width-controller {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+
+  ul.main-menu { /** width and margins controlled by .width-controller **/
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 0px; /* remove scrollbar space */
+    background: transparent; /* optional: just make scrollbar invisible */
+  }
+
+  .scrollboxes {
+  }
+
+    .scrollboxes .content {
+      padding: 0px 20px;
+    }
+
+  .form .sections .section.size-1 {
+    width: 50%;
+  }
+
+  .form .sections .section.size-2 {
+    width: 50%;
+  }
+
+  .form .sections .section.size-3 {
+    width: 50%;
+  }
+  
+  .form .sections .section.size-1.align-left,
+  .form .sections .section.size-2.align-left,
+  .form .sections .section.size-3.align-left,
+  .form .sections .section.size-1.align-center,
+  .form .sections .section.size-2.align-center,
+  .form .sections .section.size-3.align-center,
+  .form .sections .section.size-1.align-right,
+  .form .sections .section.size-2.align-right,
+  .form .sections .section.size-3.align-right {
+    text-align: left;
+  }
+  
+  .form .checkbox-text,
+  .form [type="checkbox"]:not(:checked) + label,
+  .form [type="checkbox"]:checked + label,
+  .form [type="radio"]:not(:checked) + label,
+  .form [type="radio"]:checked + label {
+    width: 100%;
+    padding: 7px 0px 20px 50px;
+  }
+
+  /* Base for label styling */
+
+  .form [type="checkbox"]:not(:checked),
+  .form [type="checkbox"]:checked,
+  .form [type="radio"]:not(:checked),
+  .form [type="radio"]:checked {
+  }
+
+    .form [type="checkbox"]:not(:checked) + label,
+    .form [type="checkbox"]:checked + label,
+    .form [type="radio"]:not(:checked) + label,
+    .form [type="radio"]:checked + label,
+    .form span.checkbox-checked {
+    }
+
+    .form [type="checkbox"]:not(:checked) + label,
+    .form [type="checkbox"]:checked + label,
+    .form [type="radio"]:not(:checked) + label,
+    .form [type="radio"]:checked + label {
+    }
+      /* checkbox aspect */
+
+      .form [type="checkbox"]:not(:checked) + label:before,
+      .form [type="checkbox"]:checked + label:before,
+      .form [type="radio"]:not(:checked) + label:before,
+      .form [type="radio"]:checked + label:before,
+      .form span.checkbox-checked:before {
+        right: auto;
+        left: 4px;
+        width: 30px;
+        height: 30px;
+      }
+
+
+      /* checked mark aspect */
+
+      .form [type="checkbox"]:not(:checked) + label:after,
+      .form [type="checkbox"]:checked + label:after,
+      .form [type="radio"]:not(:checked) + label:after,
+      .form [type="radio"]:checked + label:after,
+      .form span.checkbox-checked:after {
+        font-size: 30px;
+        top: 7px;
+        right: auto;
+        left: 4px;
+        width: 30px;
+      }
+
+      /* checked mark aspect changes */
+
+      .form [type="checkbox"]:not(:checked) + label:after,
+      .form [type="radio"]:not(:checked) + label:after {
+        opacity: 0;
+        transform: scale(0) rotate(-25deg);
+      }
+
+      .form [type="checkbox"]:checked + label:after,
+      .form [type="radio"]:checked + label:after {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+      }
+
+      .form [type="checkbox"]:checked + label:before,
+      .form [type="radio"]:checked + label:before {
+      }
+  /* disabled checkbox */
+
+  .form [type="radio"]:disabled:not(:checked) + label:before,
+  .form [type="radio"]:disabled:checked + label:before,
+  .form [type="checkbox"]:disabled:not(:checked) + label:before,
+  .form [type="checkbox"]:disabled:checked + label:before {
+    box-shadow: none;
+    border-color: #bbb;
+    background-color: #ddd;
+  }
+
+  .form [type="checkbox"]:disabled:checked + label:after,
+  .form [type="radio"]:disabled:checked + label:after {
+    color: #999;
+  }
+
+  .form [type="checkbox"]:disabled + label,
+  .form [type="radio"]:disabled + label {
+    color: #aaa;
+  }
+  /* accessibility */
+
+  /*
+[type="checkbox"]:checked:focus + label:before,
+[type="checkbox"]:not(:checked):focus + label:before {
+  border: 1px dotted #7d861e;
+}
+*/
+  /* hover style just for information */
+  .containers .content .scrollbox ul.horizontal-choices {
+  }
+
+    .containers .content .scrollbox ul.horizontal-choices li {
+    }
+
+      .containers .content .scrollbox ul.horizontal-choices li.active:before {
+      }
+
+      .containers .content .scrollbox ul.horizontal-choices li img {
+      }
+
+      .containers .content .scrollbox ul.horizontal-choices li.white {
+      }
+
+      .containers .content .scrollbox ul.horizontal-choices li.offwhite {
+      }
+
+      .containers .content .scrollbox ul.horizontal-choices li.pastel {
+      }
+
+      .containers .content .scrollbox ul.horizontal-choices li.pink {
+      }
+
+      .containers .content .scrollbox ul.horizontal-choices li.red {
+      }
+
+      .containers .content .scrollbox ul.horizontal-choices li.orange {
+      }
+
+      .containers .content .scrollbox ul.horizontal-choices li.green {
+      }
+
+      .containers .content .scrollbox ul.horizontal-choices li.blue {
+      }
+
+      .containers .content .scrollbox ul.horizontal-choices li.purple {
+      }
+
+  .form .sections {
+  }
+
+    .form .sections > h2,
+    .form .sections .section > h2,
+    .form .sections .section .contrast-container > h2 {
+    }
+
+    .form .sections > p,
+    .form .sections .section > p,
+    .form .sections .section .contrast-container > p {
+    }
+
+
+    .form .sections .section .full-description {
+    }
+
+      .form .sections .section .full-description p {
+      }
+
+    .form .sections .section .buttons {
+    }
+
+      .form .sections .section .buttons a.edit,
+      .form .sections .section .buttons a.tips {
+      }
+
+        .form .sections .section .buttons a.edit.active,
+        .form .sections .section .buttons a.tips.active {
+        }
+
+        .form .sections .section .buttons a.edit img,
+        .form .sections .section .buttons a.tips img {
+        }
+
+        .form .sections .section .buttons a.edit span,
+        .form .sections .section .buttons a.tips span {
+        }
+
+          .form .sections .section .buttons a.tips span.view {
+          }
+
+          .form .sections .section .buttons a.tips span.hide {
+          }
+
+
+    .form .sections > p .price,
+    .form .sections .section > p .price,
+    .form .sections .section .contrast-container > p .price {
+    }
+
+    .form .sections .section .contrast-container > p {
+    }
+
+    .form .sections .section .contrast-container > h2 {
+    }
+
+    .form .sections > h2.margin,
+    .form .sections .section > h2.margin,
+    .form .sections > p.margin,
+    .form .sections .section > p.margin {
+    }
+
+  .form .accordion .sections > h2,
+  .form .accordion .sections .section > h2,
+  .form .accordion .sections > p,
+  .form .accordion .sections .section > p,
+  .form.dark .sections > h2,
+  .form.dark .sections .section > h2,
+  .form.dark .sections > p,
+  .form.dark .sections .section > p {
+  }
+
+  .form .accordion hr {
+  }
+
+
+  .form .sections .section {
+  }
+
+    .form .sections .section.block {
+    }
+
+  .form .sections.top-space-50 .section {
+  }
+
+  .form .sections .section.mobile-hidden {
+  }
+
+  .form .sections .section.size-20p {
+  }
+
+
+  .form .sections .section.size-1 {
+    width: 50%;
+  }
+
+  .form .sections .section.size-2 {
+    width: 50%;
+  }
+
+  .form .sections .section.size-3 {
+    width: 50%;
+  }
+
+  .form .sections .section.size-4 {
+  }
+
+  .form .sections .section.size-5 {
+  }
+
+  .form .sections .section.size-6 {
+  }
+
+  .form .sections .section.size-7 {
+  }
+
+  .form .sections .section.size-8 {
+  }
+
+  .form .sections .section.size-9 {
+  }
+
+  .form .sections .section.size-10 {
+  }
+
+  .form .sections .section.size-11 {
+  }
+
+  .form .sections .section.size-12 {
+  }
+
+  .form .sections .section.full {
+  }
+
+  .form .sections .section.align-center {
+  }
+
+  .form .sections .section.align-right {
+  }
+
+  .form .sections .section.size-1.align-left,
+  .form .sections .section.size-2.align-left,
+  .form .sections .section.size-3.align-left,
+  .form .sections .section.size-1.align-center,
+  .form .sections .section.size-2.align-center,
+  .form .sections .section.size-3.align-center,
+  .form .sections .section.size-1.align-right,
+  .form .sections .section.size-2.align-right,
+  .form .sections .section.size-3.align-right {
+    text-align: left;
+  }
+
+  .form .sections .section.size-4.align-left,
+  .form .sections .section.size-5.align-left,
+  .form .sections .section.size-4.align-center,
+  .form .sections .section.size-5.align-center,
+  .form .sections .section.size-4.align-right,
+  .form .sections .section.size-5.align-right {
+  }
+
+  .form .sections .section.size-6.align-left,
+  .form .sections .section.size-7.align-left,
+  .form .sections .section.size-8.align-left,
+  .form .sections .section.size-9.align-left,
+  .form .sections .section.size-10.align-left,
+  .form .sections .section.size-11.align-left,
+  .form .sections .section.size-12.align-left,
+  .form .sections .section.size-6.align-center,
+  .form .sections .section.size-7.align-center,
+  .form .sections .section.size-8.align-center,
+  .form .sections .section.size-9.align-center,
+  .form .sections .section.size-10.align-center,
+  .form .sections .section.size-11.align-center,
+  .form .sections .section.size-12.align-center,
+  .form .sections .section.size-6.align-right,
+  .form .sections .section.size-7.align-right,
+  .form .sections .section.size-8.align-right,
+  .form .sections .section.size-9.align-right,
+  .form .sections .section.size-10.align-right,
+  .form .sections .section.size-11.align-right,
+  .form .sections .section.size-12.align-right {
+  }
+
+  .form .sections .section.column-70pct {
+  }
+
+  .form .sections .section.column-80pct {
+  }
+
+  .form .sections .section.column-90pct {
+  }
+
+  .form .sections .section ul.list {
+  }
+
+    .form .sections .section ul.list li,
+    .form .sections .section .comments {
+    }
+
+      .form .sections .section ul.list li p.name,
+      .form .sections .section ul.list li p.value {
+      }
+
+      .form .sections .section ul.list li p.name {
+      }
+
+      .form .sections .section ul.list li p.value {
+      }
+
+  .minevalg .sections .section img.edit,
+  .minevalg .sections .section img.delete {
+  }
+
+
+
+  .form .sections .section label {
+  }
+
+  .form .sections .section span.price {
+  }
+
+  .form .sections .section.error.error-phone label:before,
+  .form .sections .section.error.error-email label:before,
+  .form .sections .section.error.error-date label:before,
+  .form .sections .section.error.error-zip label:before {
+  }
+
+  .form .sections .section.error.error-phone label:before {
+  }
+
+  .form .sections .section.error.error-email label:before {
+  }
+
+  .form .sections .section.error.error-date label:before {
+  }
+
+  .form .sections .section.error.error-zip label:before {
+  }
+
+  .form .sections .section input[type="text"] {
+  }
+
+  .form .sections .section.error input[type="text"] {
+  }
+
+  .form .sections .section textarea {
+  }
+
+  .form button.button-straight {
+  }
+
+  .form button.button-section {
+  }
+
+    .form button.button-section img {
+    }
+
+    .form button.button-section span {
+    }
+
+
+  .form .checkbox-text,
+  .form [type="checkbox"]:not(:checked) + label,
+  .form [type="checkbox"]:checked + label,
+  .form [type="radio"]:not(:checked) + label,
+  .form [type="radio"]:checked + label {
+    width: 100%;
+    padding: 7px 0px 20px 50px;
+  }
+
+  /* Base for label styling */
+
+  .form [type="checkbox"]:not(:checked),
+  .form [type="checkbox"]:checked,
+  .form [type="radio"]:not(:checked),
+  .form [type="radio"]:checked {
+  }
+
+    .form [type="checkbox"]:not(:checked) + label,
+    .form [type="checkbox"]:checked + label,
+    .form [type="radio"]:not(:checked) + label,
+    .form [type="radio"]:checked + label,
+    .form span.checkbox-checked {
+    }
+
+    .form [type="checkbox"]:not(:checked) + label,
+    .form [type="checkbox"]:checked + label,
+    .form [type="radio"]:not(:checked) + label,
+    .form [type="radio"]:checked + label {
+    }
+      /* checkbox aspect */
+
+      .form [type="checkbox"]:not(:checked) + label:before,
+      .form [type="checkbox"]:checked + label:before,
+      .form [type="radio"]:not(:checked) + label:before,
+      .form [type="radio"]:checked + label:before,
+      .form span.checkbox-checked:before {
+        right: auto;
+        left: 4px;
+        width: 30px;
+        height: 30px;
+      }
+
+
+      /* checked mark aspect */
+
+      .form [type="checkbox"]:not(:checked) + label:after,
+      .form [type="checkbox"]:checked + label:after,
+      .form [type="radio"]:not(:checked) + label:after,
+      .form [type="radio"]:checked + label:after,
+      .form span.checkbox-checked:after {
+        font-size: 30px;
+        top: 7px;
+        right: auto;
+        left: 4px;
+        width: 30px;
+      }
+
+      /* checked mark aspect changes */
+
+      .form [type="checkbox"]:not(:checked) + label:after,
+      .form [type="radio"]:not(:checked) + label:after {
+        opacity: 0;
+        transform: scale(0) rotate(-25deg);
+      }
+
+      .form [type="checkbox"]:checked + label:after,
+      .form [type="radio"]:checked + label:after {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+      }
+
+      .form [type="checkbox"]:checked + label:before,
+      .form [type="radio"]:checked + label:before {
+      }
+  /* disabled checkbox */
+
+  .form [type="radio"]:disabled:not(:checked) + label:before,
+  .form [type="radio"]:disabled:checked + label:before,
+  .form [type="checkbox"]:disabled:not(:checked) + label:before,
+  .form [type="checkbox"]:disabled:checked + label:before {
+    box-shadow: none;
+    border-color: #bbb;
+    background-color: #ddd;
+  }
+
+  .form [type="checkbox"]:disabled:checked + label:after,
+  .form [type="radio"]:disabled:checked + label:after {
+    color: #999;
+  }
+
+  .form [type="checkbox"]:disabled + label,
+  .form [type="radio"]:disabled + label {
+    color: #aaa;
+  }
+  /* accessibility */
+
+  /*
+[type="checkbox"]:checked:focus + label:before,
+[type="checkbox"]:not(:checked):focus + label:before {
+  border: 1px dotted #7d861e;
+}
+*/
+  /* hover style just for information */
+  section.accordion.seremoni h3 {
+  }
+
+  section.accordion.seremoni p {
+  }
+
+  .form .sections .section section.accordion.musikk .comments,
+  .form .sections .section section.accordion.salmer .comments {
+  }
+
+  .form .sections .section section.accordion.musikk textarea,
+  .form .sections .section section.accordion.salmer textarea {
+  }
+
+  .blomster section > div {
+  }
+
+    .blomster section > div > div.info {
+    }
+
+  .blomster section.checked > div > div.info {
+  }
+
+  .blomster section > div > div.info > img {
+  }
+
+  .blomster section.checked > div > div.info img {
+  }
+
+  .blomster section > div > div.info p {
+  }
+
+    .blomster section > div > div.info p.price {
+    }
+
+  .blomster section > div > ul {
+  }
+
+  .blomster section > div > ul {
+  }
+
+    .blomster section > div > ul > li {
+    }
+
+      .blomster section > div > ul > li.initialized {
+      }
+
+      .blomster section > div > ul > li span.symbol-button.minus {
+      }
+
+      .blomster section > div > ul > li img {
+      }
+
+      .blomster section > div > ul > li > div.settings {
+      }
+
+        .blomster section > div > ul > li > div.settings ul.color-choices {
+        }
+
+        .blomster section > div > ul > li > div.settings .price {
+        }
+
+      .blomster section > div > ul > li > div.text {
+      }
+
+      .blomster section > div > ul > li.card > div.text,
+      .blomster section > div > ul > li.band > div.text {
+      }
+
+      .blomster section > div > ul > li > div.text .card,
+      .blomster section > div > ul > li > div.text .band {
+      }
+
+      .blomster section > div > ul > li.card > div.text .card,
+      .blomster section > div > ul > li.band > div.text .band {
+      }
+
+      .blomster section > div > ul > li > div.text > p {
+      }
+
+  .form .sections .section .blomster section > div > ul > li > div.text > textarea {
+  }
+
+  .blomster section > div span.symbol-button.plus {
+  }
+
+    .blomster section > div span.symbol-button.plus .add {
+    }
+
+  .blomster section.checked > div span.symbol-button.plus .choose {
+  }
+
+  .blomster section.checked > div span.symbol-button.plus .add {
+  }
+
+  .blomster section > div span.num-chosen {
+    padding-top: 3px;
+    /**/
+  }
+
+    .blomster section > div span.num-chosen span {
+      /**/
+    }
+
+    .blomster section > div span.num-chosen .text {
+    }
+
+    .blomster section > div span.num-chosen .single,
+    .blomster section > div span.num-chosen .multiple {
+    }
+
+    .blomster section > div span.num-chosen .num {
+    }
+
+  .minevalg .sections .section p[data-id="byratjenester"] span {
+  }
+
+  .minevalg .sections .section .buttons a.edit {
+  }
+
+  .minevalg .sections .section.deathnotice img.deathnotice-motif {
+  }
+
+  .minevalg .sections .section.blomster ul.list > li {
+  }
+
+  .minevalg .sections .section.blomster ul.list li > div {
+  }
+
+  .minevalg .sections .section.blomster ul.list li:first-child > div {
+  }
+
+  .minevalg .sections .section.blomster ul.list li > div img.product {
+  }
+
+  .minevalg .sections .section.blomster ul.list li > div img.edit {
+  }
+
+  .minevalg .sections .section.blomster ul.list li > div img.delete {
+  }
+
+  .minevalg .sections .section.blomster ul.list li > div > div {
+  }
+
+    .minevalg .sections .section.blomster ul.list li > div > div h2 {
+    }
+
+  .minevalg .sections .section.comments {
+  }
+
+    .minevalg .sections .section.comments textarea {
+    }
+
+  .accordion.dodsannonse .example img {
+    /*normal*/
+    width: 100%;
+    /**/
+  }
+
+  .accordion.dodsannonse .size-3 {
+    /*normal*/
+    width: 25% !important;
+    /**/
+  }
+
+  .accordion.dodsannonse .size-9 {
+    /*normal*/
+    width: 75% !important;
+    /**/
+  }
+
+  .accordion.dodsannonse textarea {
+    /*normal*/
+    min-height: 250px;
+    /**/
+    /*480*/
+    min-height: 150px;
+    /**/
+  }
+
+  .containers .content .scrollbox .accordion.dodsannonse ul.horizontal-choices {
+  }
+
+    .containers .content .scrollbox .accordion.dodsannonse ul.horizontal-choices li {
+    }
+
+      .containers .content .scrollbox .accordion.dodsannonse ul.horizontal-choices li.active:before {
+      }
+
+      .containers .content .scrollbox .accordion.dodsannonse ul.horizontal-choices li img {
+      }
+}
+
+@media only screen and (max-width: 768px) {
+  /** choice checkmark **/
+  @-webkit-keyframes choice-checkmark-anim {
+    0% {
+      clip: rect(94px, 0px, 94px, 0);
+    }
+
+    100% {
+      clip: rect(0px, 94px, 94px, 0);
+    }
+  }
+
+  @keyframes choice-checkmark-anim {
+    0% {
+      clip: rect(94px, 0px, 94px, 0);
+    }
+
+    100% {
+      clip: rect(0px, 94px, 94px, 0);
+    }
+  }
+
+  /** accordion checkmark **/
+  @-webkit-keyframes accordion-checkmark-anim {
+    0% {
+      clip: rect(60px, 0px, 60px, 0);
+    }
+
+    100% {
+      clip: rect(0px, 60px, 60px, 0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes accordion-checkmark-anim {
+    0% {
+      clip: rect(60px, 0px, 60px, 0);
+    }
+
+    100% {
+      clip: rect(0px, 60px, 60px, 0);
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes accordion-checkmark-bk-anim {
+    0% {
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes accordion-checkmark-bk-anim {
+    0% {
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  /** blomster add **/
+  @-webkit-keyframes blomster-add {
+    0% {
+      opacity: 1;
+      max-height: 400px;
+    }
+
+    100% {
+      opacity: 0;
+      max-height: 0px;
+    }
+  }
+
+  @keyframes blomster-add {
+    0% {
+      opacity: 1;
+      max-height: 200px;
+    }
+
+    100% {
+      opacity: 0;
+      max-height: 0px;
+    }
+  }
+
+  /** text field error **/
+  @-webkit-keyframes textfield-error {
+    0% {
+      background: #f66;
+    }
+
+    100% {
+      background: #fff;
+    }
+  }
+
+  @keyframes textfield-error {
+    0% {
+      background: #f66;
+    }
+
+    100% {
+      background: #fff;
+    }
+  }
+
+  ul.choices {
+  }
+
+    ul.choices.text li {
+      padding: 15px 0px 15px 60px;
+      min-height: 60px;
+    }
+
+    ul.choices.text.size-50 li {
+      min-height: 40px;
+    }
+
+    ul.choices.text li img.play-button {
+    }
+
+    ul.choices li > p,
+    ul.choices li > div {
+    }
+
+    ul.choices li.hidden {
+    }
+
+      ul.choices li.hidden > p,
+      ul.choices li.hidden > div {
+      }
+
+      ul.choices li.hidden:after {
+      }
+
+    ul.choices.text.size-50 li {
+      padding: 5px 0px 30px 60px;
+    }
+
+    ul.choices.image li {
+      padding: 11px 25px 30px 25px;
+      min-height: 60px;
+    }
+
+    ul.choices.two-column li {
+      /*width						: 60%;
+	margin						: 0px 20%;
+	float						: none;*/
+    }
+
+    ul.choices li.full {
+    }
+
+    ul.choices.text li:before,
+    ul.choices.text li:after,
+    ul.choices.image li .image span:before,
+    ul.choices.image li .image span:after {
+    }
+
+    ul.choices.text li:before,
+    ul.choices.text li:after,
+    ul.choices.text.size-75 li:before,
+    ul.choices.text.size-75 li:after {
+      -webkit-transform: scale(0.5, 0.5);
+      -moz-transform: scale(0.5, 0.5);
+      -o-transform: scale(0.5, 0.5);
+      transform: scale(0.5, 0.5);
+    }
+
+    ul.choices.text.size-50 li:before,
+    ul.choices.text.size-50 li:after {
+      -webkit-transform: scale(0.45, 0.45);
+      -moz-transform: scale(0.45, 0.45);
+      -o-transform: scale(0.45, 0.45);
+      transform: scale(0.45, 0.45);
+    }
+
+    ul.choices.image li .image span:before,
+    ul.choices.image li .image span:after {
+      -webkit-transform: scale(0.5, 0.5) translate(-50%, -50%);
+      -moz-transform: scale(0.5, 0.5) translate(-50%, -50%);
+      -o-transform: scale(0.5, 0.5) translate(-50%, -50%);
+      transform: scale(0.5, 0.5) translate(-50%, -50%);
+    }
+
+
+    ul.choices.text li:before,
+    ul.choices.image li .image span:before {
+    }
+
+    ul.choices.text li.active:before,
+    ul.choices.image li.active .image span:before {
+    }
+
+    ul.choices.text li:after,
+    ul.choices.image li .image span:after {
+    }
+
+    ul.choices.text.plus-button li:after,
+    ul.choices.image.plus-button li .image span:after {
+    }
+
+    ul.choices.text li:after {
+    }
+
+    ul.choices.image li .image span:after {
+    }
+
+    ul.choices.text li.active:after,
+    ul.choices.image li.active .image span:after {
+    }
+
+    ul.choices.image li .image span:before,
+    ul.choices.image li .image span:after {
+    }
+
+    ul.choices.image li:nth-child(2n) .image span:before,
+    ul.choices.image li:nth-child(2n) .image span:after {
+    }
+
+    ul.choices.image li div.info {
+    }
+
+      ul.choices.image li div.info p {
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+        ul.choices.image li div.info p.title {
+        }
+
+        ul.choices.image li div.info p.price {
+        }
+
+      ul.choices.image li div.info.read-more {
+      }
+
+        ul.choices.image li div.info.read-more p {
+        }
+
+    ul.choices.image li.info-active p.read-more span {
+    }
+
+
+    ul.choices.image li .image {
+    }
+
+      ul.choices.image li .image img {
+      }
+
+      ul.choices.image li .image span {
+      }
+
+      ul.choices.image li .image div {
+      }
+
+    ul.choices.image li.info-active .image div {
+    }
+
+    ul.choices.image li .image div p {
+    }
+
+    ul.choices li h3,
+    ul.choices li p {
+    }
+
+    ul.choices li p {
+    }
+
+    ul.choices.text li p.price {
+    }
+
+  section.accordion {
+    padding: 0px 0px 30px;
+    max-height: 34px;
+  }
+
+    section.accordion.open {
+    }
+
+
+    section.accordion header {
+      padding: 20px 40px 20px;
+    }
+
+      section.accordion header:before,
+      section.accordion header:after,
+      section.accordion.open header:before,
+      section.accordion.open header:after {
+        width: 40px;
+        height: 40px;
+        right: 40px;
+      }
+
+    section.accordion.checked header:before,
+    section.accordion.checked header:after,
+    section.accordion.open.checked header:before,
+    section.accordion.open.checked header:after {
+    }
+
+    section.accordion header:before {
+      top: 10px;
+    }
+
+    section.accordion.open header:before {
+      top: 30px;
+    }
+
+    section.accordion header:after {
+      top: 0px;
+    }
+
+    section.accordion.open header:after {
+      top: 10px;
+    }
+
+
+    section.accordion.checked header span:before {
+      width: 40px;
+      height: 40px;
+      top: 10px;
+      right: 40px;
+    }
+
+    section.accordion.checked header span:after {
+      width: 40px;
+      height: 40px;
+      right: 40px;
+      top: 10px;
+    }
+
+
+    section.accordion header h2 {
+      font-size: 20px;
+      line-height: 20px;
+      height: 20px;
+    }
+
+    section.accordion > div {
+      padding: 30px 0px 0px;
+      margin: 0px 40px;
+    }
+
+    section.accordion.open > div {
+    }
+
+    section.accordion > div > p {
+      margin: 0px 0px 30px;
+    }
+
+  section.accordion-small {
+    padding: 0px 0px 15px;
+    max-height: 20px;
+  }
+
+    section.accordion-small.open {
+    }
+
+
+    section.accordion-small header {
+      padding: 10px 10px 10px;
+    }
+
+      section.accordion-small header:before,
+      section.accordion-small header:after,
+      section.accordion-small.open header:before,
+      section.accordion-small.open header:after {
+        width: 20px;
+        height: 20px;
+        right: 10px;
+      }
+
+    section.accordion-small.checked header:before,
+    section.accordion-small.checked header:after,
+    section.accordion-small.open.checked header:before,
+    section.accordion-small.open.checked header:after {
+    }
+
+    section.accordion-small header:before {
+      top: 5px;
+    }
+
+    section.accordion-small.open header:before {
+      top: 15px;
+    }
+
+    section.accordion-small header:after {
+      top: 5px;
+    }
+
+    section.accordion-small.open header:after {
+      top: 5px;
+    }
+
+
+    section.accordion-small header h2 {
+      font-size: 14px;
+      line-height: 14px;
+      height: 14px;
+    }
+
+    section.accordion-small > div {
+      padding: 15px 0px;
+      margin: 0px 10px;
+    }
+
+    section.accordion-small.open > div {
+    }
+
+    section.accordion-small > div > p {
+      margin: 0px 0px 15px;
+    }
+
+  html, body {
+  }
+
+  article, aside, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+  }
+
+  /**
+
+	PAGE
+
+**/
+
+  h1 {
+  }
+
+  h2 {
+  }
+
+  * {
+    font-family: Montserrat, Arial, sans-serif;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  p, li {
+  }
+
+  button {
+  }
+
+  hr {
+  }
+
+  .dark hr {
+  }
+
+  button:hover {
+  }
+
+  .f-left {
+  }
+
+  .f-right {
+  }
+
+  .t-left {
+  }
+
+  .t-center {
+  }
+
+  .t-right {
+  }
+
+  .normal-hidden {
+  }
+
+  .info-no-javascript {
+  }
+
+  .pt20 {
+  }
+
+  div.backgrounds {
+  }
+
+    div.backgrounds div {
+    }
+
+      div.backgrounds div.forside,
+      div.backgrounds div.seremoni {
+      }
+
+      div.backgrounds div.blomster {
+      }
+
+      div.backgrounds div.kisteurne {
+      }
+
+      div.backgrounds div.blank {
+      }
+
+
+  .width-controller {
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+
+
+  ul.main-menu { /** width and margins controlled by .width-controller **/
+    height: 13%;
+  }
+
+  .text-editing ul.main-menu {
+  }
+
+  ul.main-menu::before {
+    height: 3px;
+    margin-top: -1px;
+  }
+
+  ul.main-menu li {
+  }
+
+    ul.main-menu li.item-1 {
+    }
+
+    ul.main-menu li.item-2 {
+    }
+
+    ul.main-menu li.item-3 {
+    }
+
+    ul.main-menu li.item-4 {
+    }
+
+    ul.main-menu li.item-5 {
+    }
+
+    ul.main-menu li img {
+      border-width: 3px;
+    }
+
+    ul.main-menu li.active img {
+    }
+
+
+  div.containers {
+    height: 83%; /* 83 */
+    height: 85%; /* 85 */
+  }
+
+  .text-editing div.containers {
+  }
+
+  .top-line {
+    padding: 15px;
+  }
+
+  .text-editing .top-line {
+  }
+
+  .top-line .logo {
+    height: 55px;
+  }
+
+  .top-line p {
+  }
+
+  .top-line .my-choices {
+  }
+
+  .top-line .price {
+  }
+
+    .top-line .price .info {
+    }
+
+  .top-line .message {
+  }
+
+    .top-line .message span {
+    }
+
+      .top-line .message span.in {
+      }
+
+      .top-line .message span.out {
+      }
+
+
+
+
+
+  span.symbol-button {
+    padding: 5px 35px 0px 0px;
+    height: 30px;
+  }
+
+    span.symbol-button:before,
+    span.symbol-button:after {
+    }
+
+    span.symbol-button:before {
+      top: 0px;
+      width: 28px;
+      height: 28px;
+    }
+
+    span.symbol-button:after {
+      width: 20px;
+      height: 20px;
+    }
+
+    span.symbol-button.plus:after {
+    }
+
+    span.symbol-button.minus:after {
+    }
+
+  ::-webkit-scrollbar {
+    width: 0px; /* remove scrollbar space */
+    background: transparent; /* optional: just make scrollbar invisible */
+  }
+
+  .scrollboxes {
+  }
+
+    .scrollboxes .content {
+      margin-top: 68px;
+    }
+
+  .text-editing .scrollboxes .content {
+  }
+
+  .scrollboxes .content.down {
+  }
+
+  .scrollboxes .content.up {
+  }
+
+    .scrollboxes .content.up.down {
+    }
+
+  .scrollboxes .content .scrollbox {
+  }
+
+
+    .scrollboxes .content .scrollbox.dark {
+    }
+
+    .scrollboxes .content .scrollbox .contrast-container.mobile {
+    }
+
+
+    .scrollboxes .content .scrollbox h1 {
+      font-size: 36px;
+      line-height: 36px;
+      letter-spacing: 4px;
+    }
+
+    .scrollboxes .content .scrollbox.dark h1 {
+    }
+
+    .scrollboxes .content .scrollbox h1 span {
+      font-size: 30px;
+      line-height: 36px;
+    }
+
+    .scrollboxes .content .scrollbox .heading img {
+    }
+
+  .form .sections {
+  }
+
+    .form .sections > h2,
+    .form .sections .section > h2,
+    .form .sections .section .contrast-container > h2 {
+      font-size: 20px;
+      line-height: 26px;
+      padding: 0px 10% 10px;
+    }
+
+    .form .sections > p,
+    .form .sections .section > p,
+    .form .sections .section .contrast-container > p {
+      font-size: 16px;
+      line-height: 22px;
+      padding: 0px 10% 30px;
+    }
+
+
+    .form .sections .section .full-description {
+    }
+
+      .form .sections .section .full-description p {
+      }
+
+    .form .sections .section .buttons {
+    }
+
+      .form .sections .section .buttons a.edit,
+      .form .sections .section .buttons a.tips {
+      }
+
+        .form .sections .section .buttons a.edit.active,
+        .form .sections .section .buttons a.tips.active {
+        }
+
+        .form .sections .section .buttons a.edit img,
+        .form .sections .section .buttons a.tips img {
+        }
+
+        .form .sections .section .buttons a.edit span,
+        .form .sections .section .buttons a.tips span {
+        }
+
+          .form .sections .section .buttons a.tips span.view {
+          }
+
+          .form .sections .section .buttons a.tips span.hide {
+          }
+
+
+    .form .sections > p .price,
+    .form .sections .section > p .price,
+    .form .sections .section .contrast-container > p .price {
+    }
+
+    .form .sections .section .contrast-container > p {
+    }
+
+    .form .sections .section .contrast-container > h2 {
+    }
+
+    .form .sections > h2.margin,
+    .form .sections .section > h2.margin,
+    .form .sections > p.margin,
+    .form .sections .section > p.margin {
+    }
+
+  .form .accordion .sections > h2,
+  .form .accordion .sections .section > h2,
+  .form .accordion .sections > p,
+  .form .accordion .sections .section > p,
+  .form.dark .sections > h2,
+  .form.dark .sections .section > h2,
+  .form.dark .sections > p,
+  .form.dark .sections .section > p {
+  }
+
+  .form .accordion hr {
+  }
+
+
+  .form .sections .section {
+  }
+
+    .form .sections .section.block {
+    }
+
+  .form .sections.top-space-50 .section {
+  }
+
+  .form .sections .section.mobile-hidden {
+  }
+
+  .form .sections .section.size-20p {
+    width: 33.33%;
+  }
+
+
+  .form .sections .section.size-1 {
+  }
+
+  .form .sections .section.size-2 {
+  }
+
+  .form .sections .section.size-3 {
+  }
+
+  .form .sections .section.size-4 {
+  }
+
+  .form .sections .section.size-5 {
+  }
+
+  .form .sections .section.size-6 {
+  }
+
+  .form .sections .section.size-7 {
+  }
+
+  .form .sections .section.size-8 {
+  }
+
+  .form .sections .section.size-9 {
+  }
+
+  .form .sections .section.size-10 {
+  }
+
+  .form .sections .section.size-11 {
+  }
+
+  .form .sections .section.size-12 {
+  }
+
+  .form .sections .section.full {
+  }
+
+  .form .sections .section.align-center {
+  }
+
+  .form .sections .section.align-right {
+  }
+
+  .form .sections .section.size-1.align-left,
+  .form .sections .section.size-2.align-left,
+  .form .sections .section.size-3.align-left,
+  .form .sections .section.size-1.align-center,
+  .form .sections .section.size-2.align-center,
+  .form .sections .section.size-3.align-center,
+  .form .sections .section.size-1.align-right,
+  .form .sections .section.size-2.align-right,
+  .form .sections .section.size-3.align-right {
+  }
+
+  .form .sections .section.size-4.align-left,
+  .form .sections .section.size-5.align-left,
+  .form .sections .section.size-4.align-center,
+  .form .sections .section.size-5.align-center,
+  .form .sections .section.size-4.align-right,
+  .form .sections .section.size-5.align-right {
+    text-align: left;
+  }
+
+  .form .sections .section.size-6.align-left,
+  .form .sections .section.size-7.align-left,
+  .form .sections .section.size-8.align-left,
+  .form .sections .section.size-9.align-left,
+  .form .sections .section.size-10.align-left,
+  .form .sections .section.size-11.align-left,
+  .form .sections .section.size-12.align-left,
+  .form .sections .section.size-6.align-center,
+  .form .sections .section.size-7.align-center,
+  .form .sections .section.size-8.align-center,
+  .form .sections .section.size-9.align-center,
+  .form .sections .section.size-10.align-center,
+  .form .sections .section.size-11.align-center,
+  .form .sections .section.size-12.align-center,
+  .form .sections .section.size-6.align-right,
+  .form .sections .section.size-7.align-right,
+  .form .sections .section.size-8.align-right,
+  .form .sections .section.size-9.align-right,
+  .form .sections .section.size-10.align-right,
+  .form .sections .section.size-11.align-right,
+  .form .sections .section.size-12.align-right {
+  }
+
+  .form .sections .section.column-70pct {
+  }
+
+  .form .sections .section.column-80pct {
+  }
+
+  .form .sections .section.column-90pct {
+  }
+
+  .form .sections .section ul.list {
+  }
+
+    .form .sections .section ul.list li,
+    .form .sections .section .comments {
+      margin: 0px 10px;
+      padding: 0px 10% 20px 10%;
+    }
+
+      .form .sections .section ul.list li p.name,
+      .form .sections .section ul.list li p.value {
+      }
+
+      .form .sections .section ul.list li p.name {
+        width: 40%;
+      }
+
+      .form .sections .section ul.list li p.value {
+        width: 60%;
+        padding-right: 40px;
+      }
+
+  .minevalg .sections .section img.edit,
+  .minevalg .sections .section img.delete {
+    right: 10%;
+    height: 40px;
+  }
+
+
+
+  .form .sections .section label {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .form .sections .section span.price {
+  }
+
+  .form .sections .section.error.error-phone label:before,
+  .form .sections .section.error.error-email label:before,
+  .form .sections .section.error.error-date label:before,
+  .form .sections .section.error.error-zip label:before {
+    top: 80px;
+    font-size: 14px;
+  }
+
+  .form .sections .section.error.error-phone label:before {
+  }
+
+  .form .sections .section.error.error-email label:before {
+  }
+
+  .form .sections .section.error.error-date label:before {
+  }
+
+  .form .sections .section.error.error-zip label:before {
+  }
+
+  .form .sections .section input[type="text"] {
+    padding: 12px;
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  .form .sections .section.error input[type="text"] {
+  }
+
+  .form .sections .section textarea {
+    padding: 5px;
+    font-size: 18px;
+    line-height: 22px;
+    height: 200px;
+  }
+
+  .form button.button-straight {
+  }
+
+  .form button.button-section {
+    height: 80px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+    .form button.button-section img {
+      padding-right: 7%;
+      height: 60%;
+    }
+
+    .form button.button-section span {
+    }
+
+
+  .form .checkbox-text,
+  .form [type="checkbox"]:not(:checked) + label,
+  .form [type="checkbox"]:checked + label,
+  .form [type="radio"]:not(:checked) + label,
+  .form [type="radio"]:checked + label {
+  }
+
+  /* Base for label styling */
+
+  .form [type="checkbox"]:not(:checked),
+  .form [type="checkbox"]:checked,
+  .form [type="radio"]:not(:checked),
+  .form [type="radio"]:checked {
+  }
+
+    .form [type="checkbox"]:not(:checked) + label,
+    .form [type="checkbox"]:checked + label,
+    .form [type="radio"]:not(:checked) + label,
+    .form [type="radio"]:checked + label,
+    .form span.checkbox-checked {
+    }
+
+    .form [type="checkbox"]:not(:checked) + label,
+    .form [type="checkbox"]:checked + label,
+    .form [type="radio"]:not(:checked) + label,
+    .form [type="radio"]:checked + label {
+    }
+      /* checkbox aspect */
+
+      .form [type="checkbox"]:not(:checked) + label:before,
+      .form [type="checkbox"]:checked + label:before,
+      .form [type="radio"]:not(:checked) + label:before,
+      .form [type="radio"]:checked + label:before,
+      .form span.checkbox-checked:before {
+      }
+
+
+      /* checked mark aspect */
+
+      .form [type="checkbox"]:not(:checked) + label:after,
+      .form [type="checkbox"]:checked + label:after,
+      .form [type="radio"]:not(:checked) + label:after,
+      .form [type="radio"]:checked + label:after,
+      .form span.checkbox-checked:after {
+      }
+
+      /* checked mark aspect changes */
+
+      .form [type="checkbox"]:not(:checked) + label:after,
+      .form [type="radio"]:not(:checked) + label:after {
+        opacity: 0;
+        transform: scale(0) rotate(-25deg);
+      }
+
+      .form [type="checkbox"]:checked + label:after,
+      .form [type="radio"]:checked + label:after {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+      }
+
+      .form [type="checkbox"]:checked + label:before,
+      .form [type="radio"]:checked + label:before {
+      }
+  /* disabled checkbox */
+
+  .form [type="radio"]:disabled:not(:checked) + label:before,
+  .form [type="radio"]:disabled:checked + label:before,
+  .form [type="checkbox"]:disabled:not(:checked) + label:before,
+  .form [type="checkbox"]:disabled:checked + label:before {
+    box-shadow: none;
+    border-color: #bbb;
+    background-color: #ddd;
+  }
+
+  .form [type="checkbox"]:disabled:checked + label:after,
+  .form [type="radio"]:disabled:checked + label:after {
+    color: #999;
+  }
+
+  .form [type="checkbox"]:disabled + label,
+  .form [type="radio"]:disabled + label {
+    color: #aaa;
+  }
+  /* accessibility */
+
+  /*
+[type="checkbox"]:checked:focus + label:before,
+[type="checkbox"]:not(:checked):focus + label:before {
+  border: 1px dotted #7d861e;
+}
+*/
+  /* hover style just for information */
+  .containers .content .scrollbox ul.horizontal-choices {
+  }
+
+    .containers .content .scrollbox ul.horizontal-choices li {
+    }
+
+      .containers .content .scrollbox ul.horizontal-choices li.active:before {
+      }
+
+      .containers .content .scrollbox ul.horizontal-choices li img {
+      }
+
+      .containers .content .scrollbox ul.horizontal-choices li.white {
+      }
+
+      .containers .content .scrollbox ul.horizontal-choices li.offwhite {
+      }
+
+      .containers .content .scrollbox ul.horizontal-choices li.pastel {
+      }
+
+      .containers .content .scrollbox ul.horizontal-choices li.pink {
+      }
+
+      .containers .content .scrollbox ul.horizontal-choices li.red {
+      }
+
+      .containers .content .scrollbox ul.horizontal-choices li.orange {
+      }
+
+      .containers .content .scrollbox ul.horizontal-choices li.green {
+      }
+
+      .containers .content .scrollbox ul.horizontal-choices li.blue {
+      }
+
+      .containers .content .scrollbox ul.horizontal-choices li.purple {
+      }
+
+  .form .sections {
+  }
+
+    .form .sections > h2,
+    .form .sections .section > h2,
+    .form .sections .section .contrast-container > h2 {
+      font-size: 20px;
+      line-height: 26px;
+      padding: 0px 10% 10px;
+    }
+
+    .form .sections > p,
+    .form .sections .section > p,
+    .form .sections .section .contrast-container > p {
+      font-size: 16px;
+      line-height: 22px;
+      padding: 0px 10% 30px;
+    }
+
+
+    .form .sections .section .full-description {
+    }
+
+      .form .sections .section .full-description p {
+      }
+
+    .form .sections .section .buttons {
+    }
+
+      .form .sections .section .buttons a.edit,
+      .form .sections .section .buttons a.tips {
+      }
+
+        .form .sections .section .buttons a.edit.active,
+        .form .sections .section .buttons a.tips.active {
+        }
+
+        .form .sections .section .buttons a.edit img,
+        .form .sections .section .buttons a.tips img {
+        }
+
+        .form .sections .section .buttons a.edit span,
+        .form .sections .section .buttons a.tips span {
+        }
+
+          .form .sections .section .buttons a.tips span.view {
+          }
+
+          .form .sections .section .buttons a.tips span.hide {
+          }
+
+
+    .form .sections > p .price,
+    .form .sections .section > p .price,
+    .form .sections .section .contrast-container > p .price {
+    }
+
+    .form .sections .section .contrast-container > p {
+    }
+
+    .form .sections .section .contrast-container > h2 {
+    }
+
+    .form .sections > h2.margin,
+    .form .sections .section > h2.margin,
+    .form .sections > p.margin,
+    .form .sections .section > p.margin {
+    }
+
+  .form .accordion .sections > h2,
+  .form .accordion .sections .section > h2,
+  .form .accordion .sections > p,
+  .form .accordion .sections .section > p,
+  .form.dark .sections > h2,
+  .form.dark .sections .section > h2,
+  .form.dark .sections > p,
+  .form.dark .sections .section > p {
+  }
+
+  .form .accordion hr {
+  }
+
+
+  .form .sections .section {
+  }
+
+    .form .sections .section.block {
+    }
+
+  .form .sections.top-space-50 .section {
+  }
+
+  .form .sections .section.mobile-hidden {
+  }
+
+  .form .sections .section.size-20p {
+    width: 33.33%;
+  }
+
+
+  .form .sections .section.size-1 {
+  }
+
+  .form .sections .section.size-2 {
+  }
+
+  .form .sections .section.size-3 {
+  }
+
+  .form .sections .section.size-4 {
+  }
+
+  .form .sections .section.size-5 {
+  }
+
+  .form .sections .section.size-6 {
+  }
+
+  .form .sections .section.size-7 {
+  }
+
+  .form .sections .section.size-8 {
+  }
+
+  .form .sections .section.size-9 {
+  }
+
+  .form .sections .section.size-10 {
+  }
+
+  .form .sections .section.size-11 {
+  }
+
+  .form .sections .section.size-12 {
+  }
+
+  .form .sections .section.full {
+  }
+
+  .form .sections .section.align-center {
+  }
+
+  .form .sections .section.align-right {
+  }
+
+  .form .sections .section.size-1.align-left,
+  .form .sections .section.size-2.align-left,
+  .form .sections .section.size-3.align-left,
+  .form .sections .section.size-1.align-center,
+  .form .sections .section.size-2.align-center,
+  .form .sections .section.size-3.align-center,
+  .form .sections .section.size-1.align-right,
+  .form .sections .section.size-2.align-right,
+  .form .sections .section.size-3.align-right {
+  }
+
+  .form .sections .section.size-4.align-left,
+  .form .sections .section.size-5.align-left,
+  .form .sections .section.size-4.align-center,
+  .form .sections .section.size-5.align-center,
+  .form .sections .section.size-4.align-right,
+  .form .sections .section.size-5.align-right {
+    text-align: left;
+  }
+
+  .form .sections .section.size-6.align-left,
+  .form .sections .section.size-7.align-left,
+  .form .sections .section.size-8.align-left,
+  .form .sections .section.size-9.align-left,
+  .form .sections .section.size-10.align-left,
+  .form .sections .section.size-11.align-left,
+  .form .sections .section.size-12.align-left,
+  .form .sections .section.size-6.align-center,
+  .form .sections .section.size-7.align-center,
+  .form .sections .section.size-8.align-center,
+  .form .sections .section.size-9.align-center,
+  .form .sections .section.size-10.align-center,
+  .form .sections .section.size-11.align-center,
+  .form .sections .section.size-12.align-center,
+  .form .sections .section.size-6.align-right,
+  .form .sections .section.size-7.align-right,
+  .form .sections .section.size-8.align-right,
+  .form .sections .section.size-9.align-right,
+  .form .sections .section.size-10.align-right,
+  .form .sections .section.size-11.align-right,
+  .form .sections .section.size-12.align-right {
+  }
+
+  .form .sections .section.column-70pct {
+  }
+
+  .form .sections .section.column-80pct {
+  }
+
+  .form .sections .section.column-90pct {
+  }
+
+  .form .sections .section ul.list {
+  }
+
+    .form .sections .section ul.list li,
+    .form .sections .section .comments {
+      margin: 0px 10px;
+      padding: 0px 10% 20px 10%;
+    }
+
+      .form .sections .section ul.list li p.name,
+      .form .sections .section ul.list li p.value {
+      }
+
+      .form .sections .section ul.list li p.name {
+        width: 40%;
+      }
+
+      .form .sections .section ul.list li p.value {
+        width: 60%;
+        padding-right: 40px;
+      }
+
+  .minevalg .sections .section img.edit,
+  .minevalg .sections .section img.delete {
+    right: 10%;
+    height: 40px;
+  }
+
+
+
+  .form .sections .section label {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .form .sections .section span.price {
+  }
+
+  .form .sections .section.error.error-phone label:before,
+  .form .sections .section.error.error-email label:before,
+  .form .sections .section.error.error-date label:before,
+  .form .sections .section.error.error-zip label:before {
+    top: 80px;
+    font-size: 14px;
+  }
+
+  .form .sections .section.error.error-phone label:before {
+  }
+
+  .form .sections .section.error.error-email label:before {
+  }
+
+  .form .sections .section.error.error-date label:before {
+  }
+
+  .form .sections .section.error.error-zip label:before {
+  }
+
+  .form .sections .section input[type="text"] {
+    padding: 12px;
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  .form .sections .section.error input[type="text"] {
+  }
+
+  .form .sections .section textarea {
+    padding: 5px;
+    font-size: 18px;
+    line-height: 22px;
+    height: 200px;
+  }
+
+  .form button.button-straight {
+  }
+
+  .form button.button-section {
+    height: 80px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+    .form button.button-section img {
+      padding-right: 7%;
+      height: 60%;
+    }
+
+    .form button.button-section span {
+    }
+
+
+  .form .checkbox-text,
+  .form [type="checkbox"]:not(:checked) + label,
+  .form [type="checkbox"]:checked + label,
+  .form [type="radio"]:not(:checked) + label,
+  .form [type="radio"]:checked + label {
+  }
+
+  /* Base for label styling */
+
+  .form [type="checkbox"]:not(:checked),
+  .form [type="checkbox"]:checked,
+  .form [type="radio"]:not(:checked),
+  .form [type="radio"]:checked {
+  }
+
+    .form [type="checkbox"]:not(:checked) + label,
+    .form [type="checkbox"]:checked + label,
+    .form [type="radio"]:not(:checked) + label,
+    .form [type="radio"]:checked + label,
+    .form span.checkbox-checked {
+    }
+
+    .form [type="checkbox"]:not(:checked) + label,
+    .form [type="checkbox"]:checked + label,
+    .form [type="radio"]:not(:checked) + label,
+    .form [type="radio"]:checked + label {
+    }
+      /* checkbox aspect */
+
+      .form [type="checkbox"]:not(:checked) + label:before,
+      .form [type="checkbox"]:checked + label:before,
+      .form [type="radio"]:not(:checked) + label:before,
+      .form [type="radio"]:checked + label:before,
+      .form span.checkbox-checked:before {
+      }
+
+
+      /* checked mark aspect */
+
+      .form [type="checkbox"]:not(:checked) + label:after,
+      .form [type="checkbox"]:checked + label:after,
+      .form [type="radio"]:not(:checked) + label:after,
+      .form [type="radio"]:checked + label:after,
+      .form span.checkbox-checked:after {
+      }
+
+      /* checked mark aspect changes */
+
+      .form [type="checkbox"]:not(:checked) + label:after,
+      .form [type="radio"]:not(:checked) + label:after {
+        opacity: 0;
+        transform: scale(0) rotate(-25deg);
+      }
+
+      .form [type="checkbox"]:checked + label:after,
+      .form [type="radio"]:checked + label:after {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+      }
+
+      .form [type="checkbox"]:checked + label:before,
+      .form [type="radio"]:checked + label:before {
+      }
+  /* disabled checkbox */
+
+  .form [type="radio"]:disabled:not(:checked) + label:before,
+  .form [type="radio"]:disabled:checked + label:before,
+  .form [type="checkbox"]:disabled:not(:checked) + label:before,
+  .form [type="checkbox"]:disabled:checked + label:before {
+    box-shadow: none;
+    border-color: #bbb;
+    background-color: #ddd;
+  }
+
+  .form [type="checkbox"]:disabled:checked + label:after,
+  .form [type="radio"]:disabled:checked + label:after {
+    color: #999;
+  }
+
+  .form [type="checkbox"]:disabled + label,
+  .form [type="radio"]:disabled + label {
+    color: #aaa;
+  }
+  /* accessibility */
+
+  /*
+[type="checkbox"]:checked:focus + label:before,
+[type="checkbox"]:not(:checked):focus + label:before {
+  border: 1px dotted #7d861e;
+}
+*/
+  /* hover style just for information */
+  section.accordion.seremoni h3 {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  section.accordion.seremoni p {
+  }
+
+  .form .sections .section section.accordion.musikk .comments,
+  .form .sections .section section.accordion.salmer .comments {
+  }
+
+  .form .sections .section section.accordion.musikk textarea,
+  .form .sections .section section.accordion.salmer textarea {
+  }
+
+  .blomster section > div {
+  }
+
+    .blomster section > div > div.info {
+      padding: 0px 0px 30px;
+      margin: 0px 0px 30px;
+    }
+
+  .blomster section.checked > div > div.info {
+  }
+
+  .blomster section > div > div.info > img {
+  }
+
+  .blomster section.checked > div > div.info img {
+  }
+
+  .blomster section > div > div.info p {
+  }
+
+    .blomster section > div > div.info p.price {
+    }
+
+  .blomster section > div > ul {
+  }
+
+  .blomster section > div > ul {
+  }
+
+    .blomster section > div > ul > li {
+      padding: 0px 0px 30px;
+      margin: 0px 0px 30px;
+    }
+
+      .blomster section > div > ul > li.initialized {
+      }
+
+      .blomster section > div > ul > li span.symbol-button.minus {
+      }
+
+      .blomster section > div > ul > li img {
+      }
+
+      .blomster section > div > ul > li > div.settings {
+      }
+
+        .blomster section > div > ul > li > div.settings ul.color-choices {
+        }
+
+        .blomster section > div > ul > li > div.settings .price {
+        }
+
+      .blomster section > div > ul > li > div.text {
+        padding-top: 1px;
+        margin-left: 0px;
+        clear: left;
+      }
+
+      .blomster section > div > ul > li.card > div.text,
+      .blomster section > div > ul > li.band > div.text {
+      }
+
+      .blomster section > div > ul > li > div.text .card,
+      .blomster section > div > ul > li > div.text .band {
+      }
+
+      .blomster section > div > ul > li.card > div.text .card,
+      .blomster section > div > ul > li.band > div.text .band {
+      }
+
+      .blomster section > div > ul > li > div.text > p {
+        padding: 10px 0px 5px;
+      }
+
+  .form .sections .section .blomster section > div > ul > li > div.text > textarea {
+  }
+
+  .blomster section > div span.symbol-button.plus {
+  }
+
+    .blomster section > div span.symbol-button.plus .add {
+    }
+
+  .blomster section.checked > div span.symbol-button.plus .choose {
+  }
+
+  .blomster section.checked > div span.symbol-button.plus .add {
+  }
+
+  .blomster section > div span.num-chosen {
+    padding-top: 3px;
+    /**/
+  }
+
+    .blomster section > div span.num-chosen span {
+      /**/
+    }
+
+    .blomster section > div span.num-chosen .text {
+    }
+
+    .blomster section > div span.num-chosen .single,
+    .blomster section > div span.num-chosen .multiple {
+    }
+
+    .blomster section > div span.num-chosen .num {
+    }
+
+  .minevalg .sections .section p[data-id="byratjenester"] span {
+  }
+
+  .minevalg .sections .section .buttons a.edit {
+  }
+
+  .minevalg .sections .section.deathnotice img.deathnotice-motif {
+  }
+
+  .minevalg .sections .section.blomster ul.list > li {
+    padding: 0px 10% 20px 10%;
+  }
+
+  .minevalg .sections .section.blomster ul.list li > div {
+  }
+
+  .minevalg .sections .section.blomster ul.list li:first-child > div {
+  }
+
+  .minevalg .sections .section.blomster ul.list li > div img.product {
+  }
+
+  .minevalg .sections .section.blomster ul.list li > div img.edit {
+    right: 60px;
+    top: 25px;
+  }
+
+  .minevalg .sections .section.blomster ul.list li > div img.delete {
+  }
+
+  .minevalg .sections .section.blomster ul.list li > div > div {
+  }
+
+    .minevalg .sections .section.blomster ul.list li > div > div h2 {
+      font-size: 16px;
+    }
+
+  .minevalg .sections .section.comments {
+  }
+
+    .minevalg .sections .section.comments textarea {
+      width: 100%;
+      margin: 0px;
+    }
+
+  .accordion.dodsannonse .example img {
+    /*normal*/
+    width: 100%;
+    /**/
+  }
+
+  .accordion.dodsannonse .size-3 {
+    /*normal*/
+    width: 25% !important;
+    /**/
+  }
+
+  .accordion.dodsannonse .size-9 {
+    /*normal*/
+    width: 75% !important;
+    /**/
+  }
+
+  .accordion.dodsannonse textarea {
+    /*normal*/
+    min-height: 250px;
+    /**/
+    /*480*/
+    min-height: 150px;
+    /**/
+  }
+
+  .containers .content .scrollbox .accordion.dodsannonse ul.horizontal-choices {
+  }
+
+    .containers .content .scrollbox .accordion.dodsannonse ul.horizontal-choices li {
+      width: 50px;
+      height: 50px;
+      margin: 0px 3px;
+    }
+
+      .containers .content .scrollbox .accordion.dodsannonse ul.horizontal-choices li.active:before {
+        width: 58px;
+        height: 58px;
+      }
+
+      .containers .content .scrollbox .accordion.dodsannonse ul.horizontal-choices li img {
+      }
+}
+
+@media only screen and (max-width: 480px) {
+  /** choice checkmark **/
+  @-webkit-keyframes choice-checkmark-anim {
+    0% {
+      clip: rect(94px, 0px, 94px, 0);
+    }
+
+    100% {
+      clip: rect(0px, 94px, 94px, 0);
+    }
+  }
+
+  @keyframes choice-checkmark-anim {
+    0% {
+      clip: rect(94px, 0px, 94px, 0);
+    }
+
+    100% {
+      clip: rect(0px, 94px, 94px, 0);
+    }
+  }
+
+  /** accordion checkmark **/
+  @-webkit-keyframes accordion-checkmark-anim {
+    0% {
+      clip: rect(60px, 0px, 60px, 0);
+    }
+
+    100% {
+      clip: rect(0px, 60px, 60px, 0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes accordion-checkmark-anim {
+    0% {
+      clip: rect(60px, 0px, 60px, 0);
+    }
+
+    100% {
+      clip: rect(0px, 60px, 60px, 0);
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes accordion-checkmark-bk-anim {
+    0% {
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes accordion-checkmark-bk-anim {
+    0% {
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  /** blomster add **/
+  @-webkit-keyframes blomster-add {
+    0% {
+      opacity: 1;
+      max-height: 400px;
+    }
+
+    100% {
+      opacity: 0;
+      max-height: 0px;
+    }
+  }
+
+  @keyframes blomster-add {
+    0% {
+      opacity: 1;
+      max-height: 200px;
+    }
+
+    100% {
+      opacity: 0;
+      max-height: 0px;
+    }
+  }
+
+  /** text field error **/
+  @-webkit-keyframes textfield-error {
+    0% {
+      background: #f66;
+    }
+
+    100% {
+      background: #fff;
+    }
+  }
+
+  @keyframes textfield-error {
+    0% {
+      background: #f66;
+    }
+
+    100% {
+      background: #fff;
+    }
+  }
+
+  ul.choices {
+  }
+
+    ul.choices.text li {
+      padding: 6px 0px 18px 40px;
+      min-height: 0px;
+    }
+
+    ul.choices.text.size-50 li {
+      min-height: 0px;
+    }
+
+    ul.choices.text li img.play-button {
+    }
+
+    ul.choices li > p,
+    ul.choices li > div {
+    }
+
+    ul.choices li.hidden {
+      display: none;
+    }
+
+      ul.choices li.hidden > p,
+      ul.choices li.hidden > div {
+      }
+
+      ul.choices li.hidden:after {
+      }
+
+    ul.choices.text.size-50 li {
+      padding: 0px 0px 18px 40px;
+    }
+
+    ul.choices.image li {
+      padding: 2px 20px 18px 20px;
+      min-height: 0px;
+    }
+
+    ul.choices.two-column li {
+      width: 100%;
+      margin: 0px 0px;
+    }
+
+    ul.choices li.full {
+      width: 100%;
+      margin: 0px 0px;
+    }
+
+    ul.choices.text li:before,
+    ul.choices.text li:after,
+    ul.choices.image li .image span:before,
+    ul.choices.image li .image span:after {
+    }
+
+    ul.choices.text li:before,
+    ul.choices.text li:after,
+    ul.choices.text.size-75 li:before,
+    ul.choices.text.size-75 li:after {
+      -webkit-transform: scale(0.35, 0.35);
+      -moz-transform: scale(0.35, 0.35);
+      -o-transform: scale(0.35, 0.35);
+      transform: scale(0.35, 0.35);
+    }
+
+    ul.choices.text.size-50 li:before,
+    ul.choices.text.size-50 li:after {
+      -webkit-transform: scale(0.35, 0.35);
+      -moz-transform: scale(0.35, 0.35);
+      -o-transform: scale(0.35, 0.35);
+      transform: scale(0.35, 0.35);
+    }
+
+    ul.choices.image li .image span:before,
+    ul.choices.image li .image span:after {
+      -webkit-transform: scale(0.4, 0.4) translate(-50%, -50%);
+      -moz-transform: scale(0.4, 0.4) translate(-50%, -50%);
+      -o-transform: scale(0.4, 0.4) translate(-50%, -50%);
+      transform: scale(0.4, 0.4) translate(-50%, -50%);
+    }
+
+
+    ul.choices.text li:before,
+    ul.choices.image li .image span:before {
+    }
+
+    ul.choices.text li.active:before,
+    ul.choices.image li.active .image span:before {
+    }
+
+    ul.choices.text li:after,
+    ul.choices.image li .image span:after {
+    }
+
+    ul.choices.text.plus-button li:after,
+    ul.choices.image.plus-button li .image span:after {
+    }
+
+    ul.choices.text li:after {
+    }
+
+    ul.choices.image li .image span:after {
+    }
+
+    ul.choices.text li.active:after,
+    ul.choices.image li.active .image span:after {
+    }
+
+    ul.choices.image li .image span:before,
+    ul.choices.image li .image span:after {
+    }
+
+    ul.choices.image li:nth-child(2n) .image span:before,
+    ul.choices.image li:nth-child(2n) .image span:after {
+      left: 0% !important;
+    }
+
+    ul.choices.image li div.info {
+      height: auto;
+    }
+
+      ul.choices.image li div.info p {
+        font-size: 12px;
+        line-height: 18px;
+      }
+
+        ul.choices.image li div.info p.title {
+        }
+
+        ul.choices.image li div.info p.price {
+        }
+
+      ul.choices.image li div.info.read-more {
+      }
+
+        ul.choices.image li div.info.read-more p {
+        }
+
+    ul.choices.image li.info-active p.read-more span {
+    }
+
+
+    ul.choices.image li .image {
+    }
+
+      ul.choices.image li .image img {
+      }
+
+      ul.choices.image li .image span {
+      }
+
+      ul.choices.image li .image div {
+      }
+
+    ul.choices.image li.info-active .image div {
+    }
+
+    ul.choices.image li .image div p {
+    }
+
+    ul.choices li h3,
+    ul.choices li p {
+    }
+
+    ul.choices li p {
+    }
+
+    ul.choices.text li p.price {
+      padding: 10px 0px 0px;
+    }
+
+  section.accordion {
+    /*
+	border						: 0px solid #fff;
+	border-top					: 1px solid #fff;
+	border-bottom				: 1px solid #fff;
+	*/
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    padding: 0px 0px 15px;
+    margin: -1px 5px 5px;
+    max-height: 27px;
+  }
+
+    section.accordion.open {
+      max-height: 2000px;
+    }
+
+
+    section.accordion header {
+      padding: 15px 10px 15px;
+    }
+
+      section.accordion header:before,
+      section.accordion header:after,
+      section.accordion.open header:before,
+      section.accordion.open header:after {
+        width: 20px;
+        height: 20px;
+        right: 10px;
+      }
+
+    section.accordion.checked header:before,
+    section.accordion.checked header:after,
+    section.accordion.open.checked header:before,
+    section.accordion.open.checked header:after {
+    }
+
+    section.accordion header:before {
+      top: 10px;
+    }
+
+    section.accordion.open header:before {
+      top: 25px;
+    }
+
+    section.accordion header:after {
+      top: 0px;
+    }
+
+    section.accordion.open header:after {
+      top: 10px;
+    }
+
+
+    section.accordion.checked header span:before {
+      width: 20px;
+      height: 20px;
+      top: 10px;
+      right: 10px;
+    }
+
+    section.accordion.checked header span:after {
+      width: 20px;
+      height: 20px;
+      right: 10px;
+      top: 10px;
+    }
+
+
+    section.accordion header h2 {
+      font-size: 14px;
+      line-height: 14px;
+      height: 14px;
+    }
+
+    section.accordion > div {
+      border-top: 1px solid #fff;
+      padding: 15px 0px 0px;
+      margin: 0px 10px;
+    }
+
+    section.accordion.open > div {
+    }
+
+    section.accordion > div > p {
+      margin: 0px 0px 20px;
+    }
+
+  section.accordion-small {
+    border: 0px solid #fff;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -o-border-radius: 0px;
+    border-radius: 0px;
+    padding: 0px 0px 10px;
+    margin: -1px 0px 0px;
+    max-height: 20px;
+  }
+
+    section.accordion-small.open {
+      max-height: 2000px;
+    }
+
+
+    section.accordion-small header {
+      padding: 10px 10px 10px;
+    }
+
+      section.accordion-small header:before,
+      section.accordion-small header:after,
+      section.accordion-small.open header:before,
+      section.accordion-small.open header:after {
+        width: 15px;
+        height: 15px;
+        right: 10px;
+      }
+
+    section.accordion-small.checked header:before,
+    section.accordion-small.checked header:after,
+    section.accordion-small.open.checked header:before,
+    section.accordion-small.open.checked header:after {
+    }
+
+    section.accordion-small header:before {
+      top: 5px;
+    }
+
+    section.accordion-small.open header:before {
+      top: 15px;
+    }
+
+    section.accordion-small header:after {
+      top: 5px;
+    }
+
+    section.accordion-small.open header:after {
+      top: 5px;
+    }
+
+
+    section.accordion-small header h2 {
+      font-size: 12px;
+      line-height: 12px;
+      height: 12px;
+    }
+
+    section.accordion-small > div {
+      border-top: 1px solid #fff;
+      padding: 15px 0px;
+      margin: 0px 10px;
+    }
+
+    section.accordion-small.open > div {
+    }
+
+    section.accordion-small > div > p {
+      margin: 0px 0px 10px;
+    }
+
+  html, body {
+  }
+
+  article, aside, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+  }
+
+  /**
+
+	PAGE
+
+**/
+
+  h1 {
+  }
+
+  h2 {
+  }
+
+  * {
+    font-family: Montserrat, Arial, sans-serif;
+  }
+
+  p {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  p, li {
+  }
+
+  button {
+  }
+
+  hr {
+    margin: 20px 30px;
+    height: 1px;
+  }
+
+  .dark hr {
+  }
+
+  button:hover {
+  }
+
+  .f-left {
+  }
+
+  .f-right {
+  }
+
+  .t-left {
+  }
+
+  .t-center {
+  }
+
+  .t-right {
+  }
+
+  .normal-hidden {
+  }
+
+  .info-no-javascript {
+  }
+
+  .pt20 {
+  }
+
+  div.backgrounds {
+  }
+
+    div.backgrounds div {
+    }
+
+      div.backgrounds div.forside,
+      div.backgrounds div.seremoni {
+      }
+
+      div.backgrounds div.blomster {
+      }
+
+      div.backgrounds div.kisteurne {
+      }
+
+      div.backgrounds div.blank {
+      }
+
+
+  .width-controller {
+  }
+
+
+  ul.main-menu { /** width and margins controlled by .width-controller **/
+    height: 15%;
+    margin: 0px;
+  }
+
+  .text-editing ul.main-menu {
+    bottom: -16%;
+    opacity: 0;
+    -webkit-transition: 0.8s all;
+    -moz-transition: 0.8s all;
+    -o-transition: 0.8s all;
+    transition: 0.8s all;
+  }
+
+  ul.main-menu::before {
+    height: 2px;
+    margin-top: 0px;
+  }
+
+  ul.main-menu li {
+    width: 17.5%;
+  }
+
+    ul.main-menu li.item-1 {
+    }
+
+    ul.main-menu li.item-2 {
+    }
+
+    ul.main-menu li.item-3 {
+    }
+
+    ul.main-menu li.item-4 {
+    }
+
+    ul.main-menu li.item-5 {
+    }
+
+    ul.main-menu li img {
+      border-width: 2px;
+    }
+
+    ul.main-menu li.active img {
+    }
+
+
+  div.containers {
+  }
+
+  .text-editing div.containers {
+    height: 100%;
+    -webkit-transition: 0.8s all;
+    -moz-transition: 0.8s all;
+    -o-transition: 0.8s all;
+    transition: 0.8s all;
+  }
+
+  .top-line {
+    padding: 10px;
+  }
+
+  .text-editing .top-line {
+    top: -49px;
+    opacity: 1;
+    -webkit-transition: 0.8s all;
+    -moz-transition: 0.8s all;
+    -o-transition: 0.8s all;
+    transition: 0.8s all;
+  }
+
+  .top-line .logo {
+    left: 5px;
+    height: 35px;
+  }
+
+  .top-line p {
+  }
+
+  .top-line .my-choices {
+    font-size: 14px;
+    line-height: 14px;
+    padding: 5px;
+  }
+
+  .top-line .price {
+    padding-top: 5px;
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+    .top-line .price .info {
+      display: none;
+    }
+
+  .top-line .message {
+  }
+
+    .top-line .message span {
+      padding-top: 3px;
+      font-size: 12px;
+      line-height: 12px;
+    }
+
+      .top-line .message span.in {
+      }
+
+      .top-line .message span.out {
+      }
+
+
+
+
+
+  span.symbol-button {
+    padding: 3px 30px 0px 0px;
+    height: 20px;
+  }
+
+    span.symbol-button:before,
+    span.symbol-button:after {
+    }
+
+    span.symbol-button:before {
+      top: 0px;
+      width: 22px;
+      height: 22px;
+    }
+
+    span.symbol-button:after {
+      width: 14px;
+      height: 14px;
+    }
+
+    span.symbol-button.plus:after {
+    }
+
+    span.symbol-button.minus:after {
+    }
+
+  ::-webkit-scrollbar {
+    width: 0px; /* remove scrollbar space */
+    background: transparent; /* optional: just make scrollbar invisible */
+  }
+
+  .scrollboxes {
+  }
+
+    .scrollboxes .content {
+      margin-top: 46px;
+      padding: 0px 0px;
+    }
+
+  .text-editing .scrollboxes .content {
+    margin-top: 0px;
+    -webkit-mask-image: linear-gradient( to bottom, rgba(0,0,0,1) 100%, rgba(0,0,0,0) 100% );
+    mask-image: linear-gradient( to bottom, rgba(0,0,0,1) 100%, rgba(0,0,0,0) 100% );
+    -webkit-transition: 0.8s all;
+    -moz-transition: 0.8s all;
+    -o-transition: 0.8s all;
+    transition: 0.8s all;
+  }
+
+  .scrollboxes .content.down {
+  }
+
+  .scrollboxes .content.up {
+  }
+
+    .scrollboxes .content.up.down {
+    }
+
+  .scrollboxes .content .scrollbox {
+    padding-top: 20px;
+  }
+
+
+    .scrollboxes .content .scrollbox.dark {
+    }
+
+    .scrollboxes .content .scrollbox .contrast-container.mobile {
+      background: #000;
+      background: rgba(17, 17, 17, 0.9);
+      color: #fff;
+      border: 1px solid #fff;
+      margin: 0px 5px;
+      padding: 20px;
+      text-align: center;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -o-border-radius: 5px;
+      border-radius: 5px;
+    }
+
+
+    .scrollboxes .content .scrollbox h1 {
+      padding: 0px;
+      font-size: 26px;
+      line-height: 26px;
+      letter-spacing: 3px;
+    }
+
+    .scrollboxes .content .scrollbox.dark h1 {
+    }
+
+    .scrollboxes .content .scrollbox h1 span {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    .scrollboxes .content .scrollbox .heading img {
+    }
+
+  .form .sections {
+  }
+
+    .form .sections > h2,
+    .form .sections .section > h2,
+    .form .sections .section .contrast-container > h2 {
+      font-size: 16px;
+      line-height: 22px;
+      padding: 0px 10px 10px;
+    }
+
+    .form .sections > p,
+    .form .sections .section > p,
+    .form .sections .section .contrast-container > p {
+      font-size: 14px;
+      line-height: 20px;
+      padding: 0px 10px 20px;
+    }
+
+
+    .form .sections .section .full-description {
+    }
+
+      .form .sections .section .full-description p {
+      }
+
+    .form .sections .section .buttons {
+      padding-top: 10px;
+    }
+
+      .form .sections .section .buttons a.edit,
+      .form .sections .section .buttons a.tips {
+      }
+
+        .form .sections .section .buttons a.edit.active,
+        .form .sections .section .buttons a.tips.active {
+        }
+
+        .form .sections .section .buttons a.edit img,
+        .form .sections .section .buttons a.tips img {
+          height: 20px;
+        }
+
+        .form .sections .section .buttons a.edit span,
+        .form .sections .section .buttons a.tips span {
+          font-size: 12px;
+        }
+
+          .form .sections .section .buttons a.tips span.view {
+          }
+
+          .form .sections .section .buttons a.tips span.hide {
+          }
+
+
+    .form .sections > p .price,
+    .form .sections .section > p .price,
+    .form .sections .section .contrast-container > p .price {
+    }
+
+    .form .sections .section .contrast-container > p {
+      color: #fff;
+      padding: 0px 10px 0px;
+    }
+
+    .form .sections .section .contrast-container > h2 {
+      color: #fff;
+      padding: 0px 10px 0px;
+    }
+
+    .form .sections > h2.margin,
+    .form .sections .section > h2.margin,
+    .form .sections > p.margin,
+    .form .sections .section > p.margin {
+    }
+
+  .form .accordion .sections > h2,
+  .form .accordion .sections .section > h2,
+  .form .accordion .sections > p,
+  .form .accordion .sections .section > p,
+  .form.dark .sections > h2,
+  .form.dark .sections .section > h2,
+  .form.dark .sections > p,
+  .form.dark .sections .section > p {
+  }
+
+  .form .accordion hr {
+  }
+
+
+  .form .sections .section {
+    padding-bottom: 15px;
+  }
+
+    .form .sections .section.block {
+    }
+
+  .form .sections.top-space-50 .section {
+    padding-top: 20px;
+  }
+
+  .form .sections .section.mobile-hidden {
+    display: none;
+  }
+
+  .form .sections .section.size-20p {
+  }
+
+
+  .form .sections .section.size-1 {
+  }
+
+  .form .sections .section.size-2 {
+  }
+
+  .form .sections .section.size-3 {
+  }
+
+  .form .sections .section.size-4 {
+    width: 50%;
+  }
+
+  .form .sections .section.size-5 {
+    width: 50%;
+  }
+
+  .form .sections .section.size-6 {
+    width: 100%;
+  }
+
+  .form .sections .section.size-7 {
+    width: 100%;
+  }
+
+  .form .sections .section.size-8 {
+    width: 100%;
+  }
+
+  .form .sections .section.size-9 {
+    width: 100%;
+  }
+
+  .form .sections .section.size-10 {
+    width: 100%;
+  }
+
+  .form .sections .section.size-11 {
+    width: 100%;
+  }
+
+  .form .sections .section.size-12 {
+    width: 100%;
+  }
+
+  .form .sections .section.full {
+  }
+
+  .form .sections .section.align-center {
+  }
+
+  .form .sections .section.align-right {
+  }
+
+  .form .sections .section.size-1.align-left,
+  .form .sections .section.size-2.align-left,
+  .form .sections .section.size-3.align-left,
+  .form .sections .section.size-1.align-center,
+  .form .sections .section.size-2.align-center,
+  .form .sections .section.size-3.align-center,
+  .form .sections .section.size-1.align-right,
+  .form .sections .section.size-2.align-right,
+  .form .sections .section.size-3.align-right {
+  }
+
+  .form .sections .section.size-4.align-left,
+  .form .sections .section.size-5.align-left,
+  .form .sections .section.size-4.align-center,
+  .form .sections .section.size-5.align-center,
+  .form .sections .section.size-4.align-right,
+  .form .sections .section.size-5.align-right {
+  }
+
+  .form .sections .section.size-6.align-left,
+  .form .sections .section.size-7.align-left,
+  .form .sections .section.size-8.align-left,
+  .form .sections .section.size-9.align-left,
+  .form .sections .section.size-10.align-left,
+  .form .sections .section.size-11.align-left,
+  .form .sections .section.size-12.align-left,
+  .form .sections .section.size-6.align-center,
+  .form .sections .section.size-7.align-center,
+  .form .sections .section.size-8.align-center,
+  .form .sections .section.size-9.align-center,
+  .form .sections .section.size-10.align-center,
+  .form .sections .section.size-11.align-center,
+  .form .sections .section.size-12.align-center,
+  .form .sections .section.size-6.align-right,
+  .form .sections .section.size-7.align-right,
+  .form .sections .section.size-8.align-right,
+  .form .sections .section.size-9.align-right,
+  .form .sections .section.size-10.align-right,
+  .form .sections .section.size-11.align-right,
+  .form .sections .section.size-12.align-right {
+    text-align: left;
+  }
+
+  .form .sections .section.column-70pct {
+  }
+
+  .form .sections .section.column-80pct {
+  }
+
+  .form .sections .section.column-90pct {
+  }
+
+  .form .sections .section ul.list {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+  }
+
+    .form .sections .section ul.list li,
+    .form .sections .section .comments {
+      padding: 0px 0px 0px 0px;
+    }
+
+      .form .sections .section ul.list li p.name,
+      .form .sections .section ul.list li p.value {
+        padding: 10px 0px 10px;
+      }
+
+      .form .sections .section ul.list li p.name {
+        width: 40%;
+      }
+
+      .form .sections .section ul.list li p.value {
+        width: 60%;
+        padding-right: 20px;
+      }
+
+  .minevalg .sections .section img.edit,
+  .minevalg .sections .section img.delete {
+    top: 0px;
+    right: 0px;
+    height: 30px;
+  }
+
+
+
+  .form .sections .section label {
+    padding: 0px 0px 3px 2px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .form .sections .section span.price {
+  }
+
+  .form .sections .section.error.error-phone label:before,
+  .form .sections .section.error.error-email label:before,
+  .form .sections .section.error.error-date label:before,
+  .form .sections .section.error.error-zip label:before {
+    top: 0px;
+    font-size: 12px;
+  }
+
+  .form .sections .section.error.error-phone label:before {
+    content: 'Er nummeret riktig?';
+  }
+
+  .form .sections .section.error.error-email label:before {
+    content: 'Er e-posten riktig?';
+  }
+
+  .form .sections .section.error.error-date label:before {
+    content: 'Er datoen riktig?';
+  }
+
+  .form .sections .section.error.error-zip label:before {
+    content: 'Er nummeret riktig?';
+  }
+
+  .form .sections .section input[type="text"] {
+    padding: 5px;
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .form .sections .section.error input[type="text"] {
+  }
+
+  .form .sections .section textarea {
+    padding: 5px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .form button.button-straight {
+    padding: 10px 40px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .form button.button-section {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+    .form button.button-section img {
+    }
+
+    .form button.button-section span {
+    }
+
+
+  .form .checkbox-text,
+  .form [type="checkbox"]:not(:checked) + label,
+  .form [type="checkbox"]:checked + label,
+  .form [type="radio"]:not(:checked) + label,
+  .form [type="radio"]:checked + label {
+    padding: 3px 0px 10px 40px;
+  }
+
+  /* Base for label styling */
+
+  .form [type="checkbox"]:not(:checked),
+  .form [type="checkbox"]:checked,
+  .form [type="radio"]:not(:checked),
+  .form [type="radio"]:checked {
+  }
+
+    .form [type="checkbox"]:not(:checked) + label,
+    .form [type="checkbox"]:checked + label,
+    .form [type="radio"]:not(:checked) + label,
+    .form [type="radio"]:checked + label,
+    .form span.checkbox-checked {
+    }
+
+    .form [type="checkbox"]:not(:checked) + label,
+    .form [type="checkbox"]:checked + label,
+    .form [type="radio"]:not(:checked) + label,
+    .form [type="radio"]:checked + label {
+    }
+      /* checkbox aspect */
+
+      .form [type="checkbox"]:not(:checked) + label:before,
+      .form [type="checkbox"]:checked + label:before,
+      .form [type="radio"]:not(:checked) + label:before,
+      .form [type="radio"]:checked + label:before,
+      .form span.checkbox-checked:before {
+        width: 20px;
+        height: 20px;
+      }
+
+
+      /* checked mark aspect */
+
+      .form [type="checkbox"]:not(:checked) + label:after,
+      .form [type="checkbox"]:checked + label:after,
+      .form [type="radio"]:not(:checked) + label:after,
+      .form [type="radio"]:checked + label:after,
+      .form span.checkbox-checked:after {
+        font-size: 20px;
+        top: 3px;
+        right: 5px;
+        width: 20px;
+      }
+
+      /* checked mark aspect changes */
+
+      .form [type="checkbox"]:not(:checked) + label:after,
+      .form [type="radio"]:not(:checked) + label:after {
+        opacity: 0;
+        transform: scale(0) rotate(-25deg);
+      }
+
+      .form [type="checkbox"]:checked + label:after,
+      .form [type="radio"]:checked + label:after {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+      }
+
+      .form [type="checkbox"]:checked + label:before,
+      .form [type="radio"]:checked + label:before {
+      }
+  /* disabled checkbox */
+
+  .form [type="radio"]:disabled:not(:checked) + label:before,
+  .form [type="radio"]:disabled:checked + label:before,
+  .form [type="checkbox"]:disabled:not(:checked) + label:before,
+  .form [type="checkbox"]:disabled:checked + label:before {
+    box-shadow: none;
+    border-color: #bbb;
+    background-color: #ddd;
+  }
+
+  .form [type="checkbox"]:disabled:checked + label:after,
+  .form [type="radio"]:disabled:checked + label:after {
+    color: #999;
+  }
+
+  .form [type="checkbox"]:disabled + label,
+  .form [type="radio"]:disabled + label {
+    color: #aaa;
+  }
+  /* accessibility */
+
+  /*
+[type="checkbox"]:checked:focus + label:before,
+[type="checkbox"]:not(:checked):focus + label:before {
+  border: 1px dotted #7d861e;
+}
+*/
+  /* hover style just for information */
+  .containers .content .scrollbox ul.horizontal-choices {
+  }
+
+    .containers .content .scrollbox ul.horizontal-choices li {
+      width: 20px;
+      height: 20px;
+      margin: 0px 8px 0px 0px;
+    }
+
+      .containers .content .scrollbox ul.horizontal-choices li.active:before {
+        width: 28px;
+        height: 28px;
+      }
+
+      .containers .content .scrollbox ul.horizontal-choices li img {
+      }
+
+      .containers .content .scrollbox ul.horizontal-choices li.white {
+      }
+
+      .containers .content .scrollbox ul.horizontal-choices li.offwhite {
+      }
+
+      .containers .content .scrollbox ul.horizontal-choices li.pastel {
+      }
+
+      .containers .content .scrollbox ul.horizontal-choices li.pink {
+      }
+
+      .containers .content .scrollbox ul.horizontal-choices li.red {
+      }
+
+      .containers .content .scrollbox ul.horizontal-choices li.orange {
+      }
+
+      .containers .content .scrollbox ul.horizontal-choices li.green {
+      }
+
+      .containers .content .scrollbox ul.horizontal-choices li.blue {
+      }
+
+      .containers .content .scrollbox ul.horizontal-choices li.purple {
+      }
+
+  .form .sections {
+  }
+
+    .form .sections > h2,
+    .form .sections .section > h2,
+    .form .sections .section .contrast-container > h2 {
+      font-size: 16px;
+      line-height: 22px;
+      padding: 0px 10px 10px;
+    }
+
+    .form .sections > p,
+    .form .sections .section > p,
+    .form .sections .section .contrast-container > p {
+      font-size: 14px;
+      line-height: 20px;
+      padding: 0px 10px 20px;
+    }
+
+
+    .form .sections .section .full-description {
+    }
+
+      .form .sections .section .full-description p {
+      }
+
+    .form .sections .section .buttons {
+      padding-top: 10px;
+    }
+
+      .form .sections .section .buttons a.edit,
+      .form .sections .section .buttons a.tips {
+      }
+
+        .form .sections .section .buttons a.edit.active,
+        .form .sections .section .buttons a.tips.active {
+        }
+
+        .form .sections .section .buttons a.edit img,
+        .form .sections .section .buttons a.tips img {
+          height: 20px;
+        }
+
+        .form .sections .section .buttons a.edit span,
+        .form .sections .section .buttons a.tips span {
+          font-size: 12px;
+        }
+
+          .form .sections .section .buttons a.tips span.view {
+          }
+
+          .form .sections .section .buttons a.tips span.hide {
+          }
+
+
+    .form .sections > p .price,
+    .form .sections .section > p .price,
+    .form .sections .section .contrast-container > p .price {
+    }
+
+    .form .sections .section .contrast-container > p {
+      color: #fff;
+      padding: 0px 10px 0px;
+    }
+
+    .form .sections .section .contrast-container > h2 {
+      color: #fff;
+      padding: 0px 10px 0px;
+    }
+
+    .form .sections > h2.margin,
+    .form .sections .section > h2.margin,
+    .form .sections > p.margin,
+    .form .sections .section > p.margin {
+    }
+
+  .form .accordion .sections > h2,
+  .form .accordion .sections .section > h2,
+  .form .accordion .sections > p,
+  .form .accordion .sections .section > p,
+  .form.dark .sections > h2,
+  .form.dark .sections .section > h2,
+  .form.dark .sections > p,
+  .form.dark .sections .section > p {
+  }
+
+  .form .accordion hr {
+  }
+
+
+  .form .sections .section {
+    padding-bottom: 15px;
+  }
+
+    .form .sections .section.block {
+    }
+
+  .form .sections.top-space-50 .section {
+    padding-top: 20px;
+  }
+
+  .form .sections .section.mobile-hidden {
+    display: none;
+  }
+
+  .form .sections .section.size-20p {
+  }
+
+
+  .form .sections .section.size-1 {
+  }
+
+  .form .sections .section.size-2 {
+  }
+
+  .form .sections .section.size-3 {
+  }
+
+  .form .sections .section.size-4 {
+    width: 50%;
+  }
+
+  .form .sections .section.size-5 {
+    width: 50%;
+  }
+
+  .form .sections .section.size-6 {
+    width: 100%;
+  }
+
+  .form .sections .section.size-7 {
+    width: 100%;
+  }
+
+  .form .sections .section.size-8 {
+    width: 100%;
+  }
+
+  .form .sections .section.size-9 {
+    width: 100%;
+  }
+
+  .form .sections .section.size-10 {
+    width: 100%;
+  }
+
+  .form .sections .section.size-11 {
+    width: 100%;
+  }
+
+  .form .sections .section.size-12 {
+    width: 100%;
+  }
+
+  .form .sections .section.full {
+  }
+
+  .form .sections .section.align-center {
+  }
+
+  .form .sections .section.align-right {
+  }
+
+  .form .sections .section.size-1.align-left,
+  .form .sections .section.size-2.align-left,
+  .form .sections .section.size-3.align-left,
+  .form .sections .section.size-1.align-center,
+  .form .sections .section.size-2.align-center,
+  .form .sections .section.size-3.align-center,
+  .form .sections .section.size-1.align-right,
+  .form .sections .section.size-2.align-right,
+  .form .sections .section.size-3.align-right {
+  }
+
+  .form .sections .section.size-4.align-left,
+  .form .sections .section.size-5.align-left,
+  .form .sections .section.size-4.align-center,
+  .form .sections .section.size-5.align-center,
+  .form .sections .section.size-4.align-right,
+  .form .sections .section.size-5.align-right {
+  }
+
+  .form .sections .section.size-6.align-left,
+  .form .sections .section.size-7.align-left,
+  .form .sections .section.size-8.align-left,
+  .form .sections .section.size-9.align-left,
+  .form .sections .section.size-10.align-left,
+  .form .sections .section.size-11.align-left,
+  .form .sections .section.size-12.align-left,
+  .form .sections .section.size-6.align-center,
+  .form .sections .section.size-7.align-center,
+  .form .sections .section.size-8.align-center,
+  .form .sections .section.size-9.align-center,
+  .form .sections .section.size-10.align-center,
+  .form .sections .section.size-11.align-center,
+  .form .sections .section.size-12.align-center,
+  .form .sections .section.size-6.align-right,
+  .form .sections .section.size-7.align-right,
+  .form .sections .section.size-8.align-right,
+  .form .sections .section.size-9.align-right,
+  .form .sections .section.size-10.align-right,
+  .form .sections .section.size-11.align-right,
+  .form .sections .section.size-12.align-right {
+    text-align: left;
+  }
+
+  .form .sections .section.column-70pct {
+  }
+
+  .form .sections .section.column-80pct {
+  }
+
+  .form .sections .section.column-90pct {
+  }
+
+  .form .sections .section ul.list {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+  }
+
+    .form .sections .section ul.list li,
+    .form .sections .section .comments {
+      padding: 0px 0px 0px 0px;
+    }
+
+      .form .sections .section ul.list li p.name,
+      .form .sections .section ul.list li p.value {
+        padding: 10px 0px 10px;
+      }
+
+      .form .sections .section ul.list li p.name {
+        width: 40%;
+      }
+
+      .form .sections .section ul.list li p.value {
+        width: 60%;
+        padding-right: 20px;
+      }
+
+  .minevalg .sections .section img.edit,
+  .minevalg .sections .section img.delete {
+    top: 0px;
+    right: 0px;
+    height: 30px;
+  }
+
+
+
+  .form .sections .section label {
+    padding: 0px 0px 3px 2px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .form .sections .section span.price {
+  }
+
+  .form .sections .section.error.error-phone label:before,
+  .form .sections .section.error.error-email label:before,
+  .form .sections .section.error.error-date label:before,
+  .form .sections .section.error.error-zip label:before {
+    top: 0px;
+    font-size: 12px;
+  }
+
+  .form .sections .section.error.error-phone label:before {
+    content: 'Er nummeret riktig?';
+  }
+
+  .form .sections .section.error.error-email label:before {
+    content: 'Er e-posten riktig?';
+  }
+
+  .form .sections .section.error.error-date label:before {
+    content: 'Er datoen riktig?';
+  }
+
+  .form .sections .section.error.error-zip label:before {
+    content: 'Er nummeret riktig?';
+  }
+
+  .form .sections .section input[type="text"] {
+    padding: 5px;
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .form .sections .section.error input[type="text"] {
+  }
+
+  .form .sections .section textarea {
+    padding: 5px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .form button.button-straight {
+    padding: 10px 40px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .form button.button-section {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+    .form button.button-section img {
+    }
+
+    .form button.button-section span {
+    }
+
+
+  .form .checkbox-text,
+  .form [type="checkbox"]:not(:checked) + label,
+  .form [type="checkbox"]:checked + label,
+  .form [type="radio"]:not(:checked) + label,
+  .form [type="radio"]:checked + label {
+    padding: 3px 0px 10px 40px;
+  }
+
+  /* Base for label styling */
+
+  .form [type="checkbox"]:not(:checked),
+  .form [type="checkbox"]:checked,
+  .form [type="radio"]:not(:checked),
+  .form [type="radio"]:checked {
+  }
+
+    .form [type="checkbox"]:not(:checked) + label,
+    .form [type="checkbox"]:checked + label,
+    .form [type="radio"]:not(:checked) + label,
+    .form [type="radio"]:checked + label,
+    .form span.checkbox-checked {
+    }
+
+    .form [type="checkbox"]:not(:checked) + label,
+    .form [type="checkbox"]:checked + label,
+    .form [type="radio"]:not(:checked) + label,
+    .form [type="radio"]:checked + label {
+    }
+      /* checkbox aspect */
+
+      .form [type="checkbox"]:not(:checked) + label:before,
+      .form [type="checkbox"]:checked + label:before,
+      .form [type="radio"]:not(:checked) + label:before,
+      .form [type="radio"]:checked + label:before,
+      .form span.checkbox-checked:before {
+        width: 20px;
+        height: 20px;
+      }
+
+
+      /* checked mark aspect */
+
+      .form [type="checkbox"]:not(:checked) + label:after,
+      .form [type="checkbox"]:checked + label:after,
+      .form [type="radio"]:not(:checked) + label:after,
+      .form [type="radio"]:checked + label:after,
+      .form span.checkbox-checked:after {
+        font-size: 20px;
+        top: 3px;
+        right: 5px;
+        width: 20px;
+      }
+
+      /* checked mark aspect changes */
+
+      .form [type="checkbox"]:not(:checked) + label:after,
+      .form [type="radio"]:not(:checked) + label:after {
+        opacity: 0;
+        transform: scale(0) rotate(-25deg);
+      }
+
+      .form [type="checkbox"]:checked + label:after,
+      .form [type="radio"]:checked + label:after {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+      }
+
+      .form [type="checkbox"]:checked + label:before,
+      .form [type="radio"]:checked + label:before {
+      }
+  /* disabled checkbox */
+
+  .form [type="radio"]:disabled:not(:checked) + label:before,
+  .form [type="radio"]:disabled:checked + label:before,
+  .form [type="checkbox"]:disabled:not(:checked) + label:before,
+  .form [type="checkbox"]:disabled:checked + label:before {
+    box-shadow: none;
+    border-color: #bbb;
+    background-color: #ddd;
+  }
+
+  .form [type="checkbox"]:disabled:checked + label:after,
+  .form [type="radio"]:disabled:checked + label:after {
+    color: #999;
+  }
+
+  .form [type="checkbox"]:disabled + label,
+  .form [type="radio"]:disabled + label {
+    color: #aaa;
+  }
+  /* accessibility */
+
+  /*
+[type="checkbox"]:checked:focus + label:before,
+[type="checkbox"]:not(:checked):focus + label:before {
+  border: 1px dotted #7d861e;
+}
+*/
+  /* hover style just for information */
+  section.accordion.seremoni h3 {
+    font-size: 16px;
+    line-height: 22px;
+    padding-bottom: 4px;
+  }
+
+  section.accordion.seremoni p {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .form .sections .section section.accordion.musikk .comments,
+  .form .sections .section section.accordion.salmer .comments {
+  }
+
+  .form .sections .section section.accordion.musikk textarea,
+  .form .sections .section section.accordion.salmer textarea {
+  }
+
+  .blomster section > div {
+  }
+
+    .blomster section > div > div.info {
+      padding: 0px 0px 20px;
+      margin: 0px 0px 20px;
+    }
+
+  .blomster section.checked > div > div.info {
+  }
+
+  .blomster section > div > div.info > img {
+    width: 100%;
+    float: none;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .blomster section.checked > div > div.info img {
+  }
+
+  .blomster section > div > div.info p {
+    padding: 0px;
+    margin: 0px;
+  }
+
+    .blomster section > div > div.info p.price {
+      padding: 10px 0px 10px 0px;
+    }
+
+  .blomster section > div > ul {
+  }
+
+  .blomster section > div > ul {
+  }
+
+    .blomster section > div > ul > li {
+      padding: 0px 0px 20px;
+      margin: 0px 0px 20px;
+    }
+
+      .blomster section > div > ul > li.initialized {
+        /*margin						: 0px 0px 10px 0px;*/
+      }
+
+      .blomster section > div > ul > li span.symbol-button.minus {
+      }
+
+      .blomster section > div > ul > li img {
+        width: 100px;
+      }
+
+      .blomster section > div > ul > li > div.settings {
+        margin-left: 120px;
+      }
+
+        .blomster section > div > ul > li > div.settings ul.color-choices {
+        }
+
+        .blomster section > div > ul > li > div.settings .price {
+        }
+
+      .blomster section > div > ul > li > div.text {
+      }
+
+      .blomster section > div > ul > li.card > div.text,
+      .blomster section > div > ul > li.band > div.text {
+      }
+
+      .blomster section > div > ul > li > div.text .card,
+      .blomster section > div > ul > li > div.text .band {
+      }
+
+      .blomster section > div > ul > li.card > div.text .card,
+      .blomster section > div > ul > li.band > div.text .band {
+      }
+
+      .blomster section > div > ul > li > div.text > p {
+      }
+
+  .form .sections .section .blomster section > div > ul > li > div.text > textarea {
+  }
+
+  .blomster section > div span.symbol-button.plus {
+  }
+
+    .blomster section > div span.symbol-button.plus .add {
+    }
+
+  .blomster section.checked > div span.symbol-button.plus .choose {
+  }
+
+  .blomster section.checked > div span.symbol-button.plus .add {
+  }
+
+  .blomster section > div span.num-chosen {
+    padding-top: 3px;
+    /**/
+  }
+
+    .blomster section > div span.num-chosen span {
+      /**/
+    }
+
+    .blomster section > div span.num-chosen .text {
+    }
+
+    .blomster section > div span.num-chosen .single,
+    .blomster section > div span.num-chosen .multiple {
+      display: none !important;
+    }
+
+    .blomster section > div span.num-chosen .num {
+    }
+
+  .minevalg .sections .section p[data-id="byratjenester"] span {
+  }
+
+  .minevalg .sections .section .buttons a.edit {
+  }
+
+  .minevalg .sections .section.deathnotice img.deathnotice-motif {
+    width: 45%;
+  }
+
+  .minevalg .sections .section.blomster ul.list > li {
+    padding: 0px 0px 0px 0px;
+  }
+
+  .minevalg .sections .section.blomster ul.list li > div {
+    border-top: 0px;
+    padding-top: 0px;
+    padding: 20px 0px 0px;
+  }
+
+  .minevalg .sections .section.blomster ul.list li:first-child > div {
+  }
+
+  .minevalg .sections .section.blomster ul.list li > div img.product {
+    width: 70px;
+  }
+
+  .minevalg .sections .section.blomster ul.list li > div img.edit {
+    right: 30px;
+    top: 35px;
+  }
+
+  .minevalg .sections .section.blomster ul.list li > div img.delete {
+    right: 0px;
+    top: 35px;
+  }
+
+  .minevalg .sections .section.blomster ul.list li > div > div {
+    margin-left: 90px;
+  }
+
+    .minevalg .sections .section.blomster ul.list li > div > div h2 {
+      font-size: 14px;
+    }
+
+  .minevalg .sections .section.comments {
+    padding: 0px 10px 0px 40px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+    .minevalg .sections .section.comments textarea {
+      width: 100%;
+      margin: 0px;
+    }
+
+  .accordion.dodsannonse .example img {
+    /*normal*/
+    width: 100%;
+    /**/
+  }
+
+  .accordion.dodsannonse .size-3 {
+    /*normal*/
+    width: 25% !important;
+    /**/
+  }
+
+  .accordion.dodsannonse .size-9 {
+    /*normal*/
+    width: 75% !important;
+    /**/
+    width: 100% !important;
+  }
+
+  .accordion.dodsannonse textarea {
+    /*normal*/
+    min-height: 250px;
+    /**/
+    /*480*/
+    min-height: 150px;
+    /**/
+  }
+
+  .containers .content .scrollbox .accordion.dodsannonse ul.horizontal-choices {
+  }
+
+    .containers .content .scrollbox .accordion.dodsannonse ul.horizontal-choices li {
+      width: 40px;
+      height: 40px;
+      margin: 0px 2px;
+    }
+
+      .containers .content .scrollbox .accordion.dodsannonse ul.horizontal-choices li.active:before {
+        width: 48px;
+        height: 48px;
+      }
+
+      .containers .content .scrollbox .accordion.dodsannonse ul.horizontal-choices li img {
+      }
+}
+
+
+
+div.backgrounds {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+
+  div.backgrounds div {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #fff;
+  }
+
+    div.backgrounds div.forside,
+    div.backgrounds div.seremoni {
+      background-image: url(assets/background-forsideac83.jpg?v=20180117-3);
+      transition: background-image 0.5s ease-in-out;
+    }
+
+    div.backgrounds div.blomster {
+      background-image: url(assets/background-blomster2fee.jpg?v=2080115);
+      transition: background-image 0.5s ease-in-out;
+    }
+
+    div.backgrounds div.kisteurne {
+      background-image: url(assets/background-kisteurne.jpg);
+      transition: background-image 0.5s ease-in-out;
+    }
+
+    div.backgrounds div.blank {
+      background-image: none;
+      transition: background-image 0.5s ease-in-out;
+    }
+
+
+

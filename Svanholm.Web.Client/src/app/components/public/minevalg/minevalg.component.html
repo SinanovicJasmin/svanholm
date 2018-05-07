@@ -1,0 +1,140 @@
+<div class="backgrounds">
+  <div class="blank"></div>
+</div>
+<div class="containers scrollboxes">
+  <div class="content">
+
+    <div class="scrollbox minevalg width-controller form">
+      <h1>
+        <span>Oversikt over</span>dine valg
+      </h1>
+      <div class="sections top-space-50">
+        <div class="section full">
+          <ul class="list">
+            <li><p class="name">Avd&oslash;des navn:</p><p class="value" data-id="name"></p></li>
+            <li><p class="name">F&oslash;dselsdato:</p><p class="value" data-id="birthdate"></p></li>
+            <li><p class="name">D&oslash;dsdato:</p><p class="value" data-id="dateofdeath"></p></li>
+            <li><p class="name">Avd&oslash;des sivilstatus:</p><p class="value" data-id="maritalstatus"></p></li>
+            <li><p class="name">Sted hvor avd&oslash;de befinner seg:</p><p class="value" data-id="whereat"></p></li>
+            <li><p class="name">Kommune:</p><p class="value" data-id="whereatplace"></p></li>
+          </ul>
+          <div class="buttons">
+            <a href="javascript:void(0);" (click)="editData('info','avdode')" class="edit"><img src="../../../../assets/pages/edit.svg" /><span>Rediger</span></a>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="sections">
+        <div class="section full">
+          <ul class="list">
+            <li><p class="name">P&aring;r&oslash;rende:</p><p class="value" data-id="contact_name"></p></li>
+            <li><p class="name">Adresse:</p><p class="value" data-id="contact_address"></p></li>
+            <li><p class="name">Telefon:</p><p class="value" data-id="contact_phone"></p></li>
+            <li><p class="name">E-post:</p><p class="value" data-id="contact_email"></p></li>
+          </ul>
+          <div class="buttons">
+            <a href="javascript:void(0);" (click)="editData('info', 'kontaktperson')" class="edit"><img src="../../../../assets/pages/edit.svg" /><span>Rediger</span></a>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="sections top-space-50">
+        <h2 class="margin">Gravferd</h2>
+        <div class="section full">
+          <ul class="list">
+            <li><p class="name">Gravferd:</p><p class="value" data-id="funeral"></p></li>
+            <li><p class="name">Kirke:</p><p class="value" data-id="church"></p></li>
+            <li><p class="name">Gravlund:</p><p class="value" data-id="cemetary"></p></li>
+            <li><p class="name">&Oslash;nsket dato for seremoni:</p><p class="value" data-id="funeraldate"></p></li>
+            <li><p class="name">Annet:</p><p class="value" data-id="funeralother"></p></li>
+          </ul>
+          <div class="buttons">
+            <a href="javascript:void(0);" (click)="editData('info', 'gravferd')" class="edit"><img src="../../../../assets/pages/edit.svg" /><span>Rediger</span></a>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="sections top-space-50">
+        <h2 class="margin">Minnestund</h2>
+        <div class="section full">
+          <ul class="list">
+            <li><p class="name">Minnestund:</p><p class="value" data-id="memorial"></p></li>
+            <li><p class="name">Antall sangprogrammer:</p><p class="value" data-id="booklet"></p></li>
+          </ul>
+          <div class="buttons">
+            <a href="javascript:void(0);" (click)="editData('info', 'minnestund')" class="edit"><img src="../../../../assets/pages/edit.svg" /><span>Rediger</span></a>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="sections top-space-50">
+        <h2 class="margin">Byr&aring;tjenester</h2>
+        <div class="section full">
+          <ul class="list">
+            <li><p class="name">Byr&aring;tjenester:</p><p class="value" data-id="byratjenester"></p></li>
+          </ul>
+          <div class="buttons">
+            <a href="javascript:void(0);" (click)="editData('info', 'byratjenester')" class="edit"><img src="../../../../assets/pages/edit.svg" /><span>Rediger</span></a>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="sections top-space-50">
+        <h2 class="margin">D&oslash;dsannonse og minneside</h2>
+        <div class="section full deathnotice">
+          <ul class="list">
+            <li><p class="name">D&oslash;dsannonse:</p><p class="value" data-id="deathnotice"></p><img src="../../../../assets/pages/edit.svg" class="edit" (click)="editData('info','dodsannonse')" /></li>
+            <li><p class="name">Minneside:</p><p class="value" data-id="memoryweb"></p><img src="../../../../assets/pages/edit.svg" class="edit" (click)="editData('info','minneside')" /></li>
+          </ul>
+        </div>
+      </div>
+      <hr />
+      <div class="sections top-space-50">
+        <h2 class="margin">Seremoni</h2>
+        <div class="section full">
+          <ul class="list">
+            <li><p class="name">Seremoni:</p><p class="value" data-id="seremoni"></p><img src="../../../../assets/pages/edit.svg" class="edit" (click)="editData('seremoni','seremoni')"  /></li>
+            <li><p class="name">Musikk:</p><p class="value" data-id="musikk"></p><img src="../../../../assets/pages/edit.svg" class="edit" (click)="editData('seremoni','musikk')"  /></li>
+            <li><p class="name"></p><p class="value" data-id="musikkannet"></p></li>
+            <li><p class="name">Salmer:</p><p class="value" data-id="salmer"></p><img src="../../../../assets/pages/edit.svg" class="edit" (click)="editData('seremoni','salmer')"  /></li>
+            <li><p class="name"></p><p class="value" data-id="salmerannet"></p></li>
+          </ul>
+        </div>
+      </div>
+      <hr />
+      <div class="sections top-space-50">
+        <h2 class="margin">Kiste / urne</h2>
+        <div class="section full">
+          <ul class="list">
+            <li><p class="name">Kiste:</p><p class="value" data-id="kiste"></p><img src="../../../../assets/pages/edit.svg" class="edit" (click)="editData('kisteurne','kiste')"  /></li>
+            <li><p class="name">Urne:</p><p class="value" data-id="urne"></p><img src="../../../../assets/pages/edit.svg" class="edit" (click)="editData('kisteurne','urne')"  /></li>
+          </ul>
+        </div>
+      </div>
+      <hr />
+      <div class="sections top-space-50">
+        <h2 class="margin">Blomster</h2>
+        <div class="section full blomster">
+          <ul class="list" data-id="blomster"></ul>
+          <div class="buttons">
+            <a href="javascript:void(0);" (click)="editData('blomster', '')" class="edit"><img src="../../../../assets/pages/edit.svg" /><span>Rediger</span></a>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="sections top-space-50">
+        <h2 class="margin">Annet</h2>
+        <div class="section full comments">
+          <textarea class="autosize"></textarea>
+        </div>
+      </div>
+      <hr />
+      <div class="sections">
+        <div class="section full align-center">
+          <button class="button-straight" (click)="editData('forside', '')">Lagre</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
