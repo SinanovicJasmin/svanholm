@@ -14,19 +14,20 @@
   align-items: center;
 }
 
-  .accordion__header h2 {
-    font-size: 30px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #fff;
-    margin: 0px;
-    padding: 0px;
-    font-weight: bold !important;
-    flex: 1;
-  }
+.accordion__header h2 {
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  margin: 0px;
+  padding: 0px;
+  font-weight: bold !important;
+  flex: 1;
+}
 
 .accordion::ng-deep .panel-heading {
   padding: 25px 50px;
+  cursor: pointer;
 }
 
 .accordion::ng-deep .accordion__icon {
