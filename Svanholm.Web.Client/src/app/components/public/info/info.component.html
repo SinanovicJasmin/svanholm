@@ -11,44 +11,28 @@
 
       <hr />
 
-      <section class="accordion avdode" data-group="info">
-        <header><h2>Avd&oslash;de</h2></header>
-        <div>
+      <accordion [closeOthers]="true">
+        <sv-accordion-group heading="Avd&oslash;de" name="avdode">
           <div class="sections bottom-space-50">	<div class="section size-12">		<label for="form-name">Navn p&aring; avd&oslash;de</label>		<input type="text" id="form-name" name="name" title="Navn p&aring; avd&oslash;de" />	</div></div><div class="sections bottom-space-50">	<div class="section size-6">		<label for="form-birthdate">F&oslash;dselsdato (dd.mm.&aring;&aring;)</label>		<input type="text" id="form-birthdate" name="birthdate" title="F&oslash;dselsdato (dd.mm.&aring;&aring;)" class="date" />	</div>	<div class="section size-6">		<label for="form-dateofdeath">D&oslash;dssdato (dd.mm.&aring;&aring;)</label>		<input type="text" id="form-dateofdeath" name="dateofdeath" title="D&oslash;dssdato (dd.mm.&aring;&aring;)" class="date" />	</div></div><hr /><div class="sections bottom-space-50">	<div class="section size-6">		<label for="form-maritalstatus">Avd&oslash;des sivilstatus</label>		<input type="text" id="form-maritalstatus" name="maritalstatus" title="Avd&oslash;des sivilstatus" />	</div></div><div class="sections">	<div class="section size-6">		<label for="form-whereat">Sted hvor avd&oslash;de befinner seg</label>		<input type="text" id="form-whereat" name="whereat" title="Sted hvor avd&oslash;de befinner seg" />	</div>	<div class="section size-6">		<label for="form-whereatplace">Kommune</label>		<input type="text" id="form-whereatplace" name="whereatplace" title="Kommune" class="last" />	</div></div>
-        </div>
-      </section>
+        </sv-accordion-group>
 
-      <section id="kontaktperson" class="accordion kontaktperson" data-group="info">
-        <header><h2>Kontaktperson</h2></header>
-        <div>
+        <sv-accordion-group heading="Kontaktperson" name="kontaktperson">
           <div class="sections bottom-space-50">	<div class="section size-12">		<label for="form-contact_name">Kontaktperson p&aring;r&oslash;rende</label>		<input type="text" id="form-contact_name" name="contact_name" title="Kontaktperson p&aring;r&oslash;rende" />	</div></div><div class="sections bottom-space-50">	<div class="section size-12">		<label for="form-contact_address">Adresse</label>		<input type="text" id="form-contact_address" name="contact_address" title="Adresse" />	</div></div><div class="sections bottom-space-50">	<div class="section size-6">		<label for="form-contact_zip">Postnr.</label>		<input type="text" id="form-contact_zip" name="contact_zip" title="Postnr." class="zip" />	</div>	<div class="section size-6">		<label for="form-contact_place">Poststed</label>		<input type="text" id="form-contact_place" name="contact_place" title="Poststed" />	</div></div><div class="sections">	<div class="section size-6">		<label for="form-contact_phone">Telefon</label>		<input type="text" id="form-contact_phone" name="contact_phone" title="Telefon" class="phone" />	</div>	<div class="section size-6">		<label for="form-contact_email">E-post</label>		<input type="text" id="form-contact_email" name="contact_email" title="E-post" class="email last" />	</div></div>
-        </div>
-      </section>
+        </sv-accordion-group>
 
-      <section class="accordion gravferd" data-group="info">
-        <header><h2>Gravferd og gravsted</h2></header>
-        <div>
+        <sv-accordion-group heading="Gravferd og gravsted" name="gravferd">
           <div class="sections bottom-space-50" data-radio="funeral">	<p class="margin">Kryss av. Hvis dere ikke har bestemt dere eller &oslash;nsker innspill/r&aring;d, s&aring; kryss av p&aring; &quot;usikker&quot;.</p>	<div class="section size-3 align-left">		<input type="radio" id="form-funeral-1" name="funeral" value="begravelse" title="Begravelse" />		<label for="form-funeral-1">Begravelse</label>	</div>	<div class="section size-3 align-center">		<input type="radio" id="form-funeral-2" name="funeral" value="bisettelse" title="Bisettelse" />		<label for="form-funeral-2">Bisettelse</label>	</div>	<div class="section size-3 align-center">		<input type="radio" id="form-funeral-3" name="funeral" value="usikker" title="Usikker" />		<label for="form-funeral-3">Usikker</label>	</div>	<div class="section size-3 align-right">		<input type="radio" id="form-funeral-4" name="funeral" value="ingen" title="&Oslash;nsker ingen seremoni" />		<label for="form-funeral-4">&Oslash;nsker ingen seremoni</label>	</div></div><hr /><div class="sections bottom-space-50">	<h2 class="margin">Velg gravsted</h2>	<p class="margin">Fyll inn. La st&aring; blankt om dere ikke har bestemt dere.</p>	<div class="section size-12">		<label for="form-church">Kirke / Kapell / Sted</label>		<input type="text" id="form-church" name="church" title="Kirke / Kapell / Sted" />	</div></div><div class="sections bottom-space-50">	<div class="section size-12">		<label for="form-cemetary">Gravlund</label>		<input type="text" id="form-cemetary" name="cemetary" title="Gravlund" />	</div></div><div class="sections bottom-space-50">	<div class="section size-12">		<label for="form-funeraldate">&Oslash;nsket dag (dato, dd.mm.&aring;&aring;) for seremoni</label>		<input type="text" id="form-funeraldate" name="funeraldate" title="&Oslash;nsket dag (dato, dd.mm.&aring;&aring;) for seremoni" class="date" />	</div></div><div class="sections bottom-space-50">	<div class="section size-12">	<label for="form-funeralother">Annet</label>		<textarea id="form-funeralother" name="funeralother" title="Annet" class="autosize"></textarea>	</div></div><hr /><div class="sections" data-radio="booklet">	<h2 class="margin">Sangprogram til gravferden</h2>	<p class="margin">Kryss av for antall sangprogram til gravferden.</p>	<div class="section size-12">	</div>	<div class="section size-3 align-right">		<input type="radio" id="form-booklet-1" name="booklet" value="50" title="50 stk (kr. 1843,-)" data-price-update="booklet" data-price="1843" />		<label for="form-booklet-1">50 stk<br /><span class="price">kr. 1843,-</span></label>	</div>	<div class="section size-3 align-right">		<input type="radio" id="form-booklet-2" name="booklet" value="100" title="100 stk (kr. 2160,-)" data-price-update="booklet" data-price="2160" />		<label for="form-booklet-2">100 stk<br /><span class="price">kr. 2160,-</span></label>	</div>	<div class="section size-3 align-right">		<input type="radio" id="form-booklet-3" name="booklet" value="150" title="150 stk (kr. 2478,-)" class="last" data-price-update="booklet" data-price="2478" />		<label for="form-booklet-3">150 stk<br /><span class="price">kr. 2478,-</span></label>	</div>	<div class="section size-3 align-right">		<input type="radio" id="form-booklet-4" name="booklet" value="200" title="200 stk (kr. 2795,-)" data-price-update="booklet" data-price="2795" />		<label for="form-booklet-4">200 stk<br /><span class="price">kr. 2795,-</span></label>	</div></div>
-        </div>
-      </section>
+        </sv-accordion-group>
 
-      <section class="accordion minnestund" data-group="info">
-        <header><h2>Minnestund</h2></header>
-        <div>
+        <sv-accordion-group heading="Minnestund" name="minnestund">
           <div class="sections" data-radio="memorial">	<p class="margin">Kryss av om dere &oslash;nsker bistand av oss til &aring; arrangere minnestund etter seremonien.</p>	<div class="section size-6 align-left">		<input type="radio" id="form-memorial-1" name="memorial" value="1" title="Vi &oslash;nsker at Svanholm arrangerer minnestund" />		<label for="form-memorial-1">Vi &oslash;nsker at Svanholm arrangerer minnestund</label>	</div>	<div class="section size-6 align-left">		<input type="radio" id="form-memorial-2" name="memorial" value="0" title="Vi &oslash;nsker ikke minnestund eller arrangerer selv" class="last" />		<label for="form-memorial-2">Vi &oslash;nsker ikke minnestund eller arrangerer selv</label>	</div></div>
-        </div>
-      </section>
+        </sv-accordion-group>
 
-      <section class="accordion byratjenester" data-group="info">
-        <header><h2>Byr&aring;tjenester</h2></header>
-        <div>
+        <sv-accordion-group heading="Byr&aring;tjenester" name="byratjenester">
           <ul class="choices text" data-id="velg-byratjenester"></ul>
-        </div>
-      </section>
+        </sv-accordion-group>
 
-      <section class="accordion dodsannonse" data-group="info">
-        <header><h2>D&oslash;dsannonse</h2></header>
-        <div>
+        <sv-accordion-group heading="D&oslash;dsannonse" name="dodsannonse">
           <div class="sections">
             <p class="margin">Velg gjerne <strong>motiv</strong> og list opp <strong>navn og slektskap</strong> til p&aring;r&oslash;rende som skal st&aring; i d&oslash;dsannonsen. F&oslash;r ogs&aring; gjerne opp om du har andre &oslash;nsker til teksten. <span class="price">Fra 3.500,-</span></p>
           </div>
@@ -70,15 +54,12 @@
               <img src="../../../../assets/pages/formaliteter/dodsannonse.jpg" />
             </div>
           </div>
-        </div>
-      </section>
+        </sv-accordion-group>
 
-      <section class="accordion minneside" data-group="info">
-        <header><h2>Minneside p&aring; nett</h2></header>
-        <div>
+        <sv-accordion-group heading="Minneside p&aring; nett" name="minneside">
           <div class="sections" data-radio="memoryweb">	<p class="margin">Tjenesten er gratis!</p>	<div class="section size-6 align-left">		<input type="radio" id="form-memoryweb-1" name="memoryweb" value="1" title="Ja takk! Vi &oslash;nsker minneside." />		<label for="form-memoryweb-1">Ja takk! Vi &oslash;nsker minneside.</label>	</div>	<div class="section size-6 align-left">		<input type="radio" id="form-memoryweb-2" name="memoryweb" value="0" title="Nei takk, vi &oslash;nsker ikke minneside." />		<label for="form-memoryweb-2">Nei takk, vi &oslash;nsker ikke minneside.</label>	</div></div>
-        </div>
-      </section>
+        </sv-accordion-group>
+      </accordion>
     </div>
   </div>
 </div>

@@ -1,7 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-
 import { AppComponent } from './components/app/app.component';
 import { PublicLayoutComponent } from './components/public/layout/layout.component';
 import { RouterModule } from '@angular/router';
@@ -12,7 +10,7 @@ import { InfoComponent } from './components/public/info/info.component';
 import { BlomsterComponent } from './components/public/blomster/blomster.component';
 import { MinevalgComponent } from './components/public/minevalg/minevalg.component';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
-
+import { SvAccordionGroupComponent } from '../app/shared/sv-accordion/sv-accordion-group.component'
 
 @NgModule({
   declarations: [
@@ -23,7 +21,8 @@ import { AccordionModule } from 'ngx-bootstrap/accordion';
       KisteComponent,
       SeremoniComponent,
       StartComponent,
-      MinevalgComponent
+      MinevalgComponent,
+      SvAccordionGroupComponent
   ],
   imports: [
       BrowserModule,

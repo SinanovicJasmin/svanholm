@@ -1,0 +1,10 @@
+<div #group>
+  <accordion-group class="accordion {{ done ? 'is-done' : '' }}" (isOpenChange)="openChanged($event, group)">
+    <div accordion-heading class="clearfix accordion__header">
+      <h2>{{ heading }}</h2>
+      <span class="accordion__icon"></span>
+    </div>
+
+    <ng-content></ng-content>
+  </accordion-group>
+</div>
